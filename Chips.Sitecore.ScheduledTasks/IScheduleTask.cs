@@ -3,7 +3,7 @@ using Sitecore.Tasks;
 
 namespace Chips.Sitecore.ScheduledTasks
 {
-    public interface ISchedule
+    public interface IScheduleTask
     {
         void Execute(Item[] items, CommandItem command, ScheduleItem schedule);
     }

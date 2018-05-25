@@ -3,15 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chips", "Chips\Chips.csproj", "{EEC454B2-8295-4A9B-8A3E-A7CCEB591E74}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.DependencyInjection", "Chips.DependencyInjection\Chips.DependencyInjection.csproj", "{F0B2E57B-3F93-419F-9D66-B26A3751F8CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chips.DependencyInjection", "Chips.DependencyInjection\Chips.DependencyInjection.csproj", "{F0B2E57B-3F93-419F-9D66-B26A3751F8CC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DependencyInjection", "DependencyInjection", "{6F06BE1D-A504-4245-9945-55133EE6A1B5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{91AA277A-B49D-49DE-B604-19ADE647A8AE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.DependencyInjection.SimpleInjector", "Chips.DependencyInjection.SimpleInjector\Chips.DependencyInjection.SimpleInjector.csproj", "{359DB7DA-E1A9-47CA-B41B-D5C152C205AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chips.DependencyInjection.SimpleInjector", "Chips.DependencyInjection.SimpleInjector\Chips.DependencyInjection.SimpleInjector.csproj", "{359DB7DA-E1A9-47CA-B41B-D5C152C205AD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sitecore", "Sitecore", "{1D61F505-062C-41C5-B7F6-6BE7CCDF4D42}"
 EndProject
@@ -21,16 +17,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ApplicationC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ScheduledTasks", "Chips.Sitecore.ScheduledTasks\Chips.Sitecore.ScheduledTasks.csproj", "{514C0311-8EF3-4128-8F10-EC927D12BEE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.DependencyInjection.SimpleInjector.MVC", "Chips.DependencyInjection.SimpleInjector.MVC\Chips.DependencyInjection.SimpleInjector.MVC.csproj", "{90253AC9-84F5-4278-A5E6-496B9F58C1FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationContainer", "ApplicationContainer", "{D425C194-7CFA-4B13-AD8D-E2EFCCB4FD2B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScheduledTasks", "ScheduledTasks", "{97989B02-4A6D-43AF-9545-F21628190B52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ScheduledTasks.SimpleInjector", "Chips.Sitecore.ScheduledTasks.SimpleInjector\Chips.Sitecore.ScheduledTasks.SimpleInjector.csproj", "{14F41784-5816-4C08-8D4E-FCA796FB1D8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EEC454B2-8295-4A9B-8A3E-A7CCEB591E74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EEC454B2-8295-4A9B-8A3E-A7CCEB591E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EEC454B2-8295-4A9B-8A3E-A7CCEB591E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EEC454B2-8295-4A9B-8A3E-A7CCEB591E74}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F0B2E57B-3F93-419F-9D66-B26A3751F8CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F0B2E57B-3F93-419F-9D66-B26A3751F8CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0B2E57B-3F93-419F-9D66-B26A3751F8CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,17 +51,28 @@ Global
 		{514C0311-8EF3-4128-8F10-EC927D12BEE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{514C0311-8EF3-4128-8F10-EC927D12BEE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{514C0311-8EF3-4128-8F10-EC927D12BEE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90253AC9-84F5-4278-A5E6-496B9F58C1FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90253AC9-84F5-4278-A5E6-496B9F58C1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90253AC9-84F5-4278-A5E6-496B9F58C1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90253AC9-84F5-4278-A5E6-496B9F58C1FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14F41784-5816-4C08-8D4E-FCA796FB1D8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14F41784-5816-4C08-8D4E-FCA796FB1D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14F41784-5816-4C08-8D4E-FCA796FB1D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14F41784-5816-4C08-8D4E-FCA796FB1D8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F0B2E57B-3F93-419F-9D66-B26A3751F8CC} = {6F06BE1D-A504-4245-9945-55133EE6A1B5}
-		{91AA277A-B49D-49DE-B604-19ADE647A8AE} = {6F06BE1D-A504-4245-9945-55133EE6A1B5}
 		{359DB7DA-E1A9-47CA-B41B-D5C152C205AD} = {6F06BE1D-A504-4245-9945-55133EE6A1B5}
-		{AEA94422-EB92-4400-B551-FAD39B743C9B} = {1D61F505-062C-41C5-B7F6-6BE7CCDF4D42}
-		{E81287A8-4A24-452F-BDDA-B2A0BE9999A5} = {1D61F505-062C-41C5-B7F6-6BE7CCDF4D42}
-		{514C0311-8EF3-4128-8F10-EC927D12BEE0} = {1D61F505-062C-41C5-B7F6-6BE7CCDF4D42}
+		{AEA94422-EB92-4400-B551-FAD39B743C9B} = {D425C194-7CFA-4B13-AD8D-E2EFCCB4FD2B}
+		{E81287A8-4A24-452F-BDDA-B2A0BE9999A5} = {D425C194-7CFA-4B13-AD8D-E2EFCCB4FD2B}
+		{514C0311-8EF3-4128-8F10-EC927D12BEE0} = {97989B02-4A6D-43AF-9545-F21628190B52}
+		{90253AC9-84F5-4278-A5E6-496B9F58C1FC} = {6F06BE1D-A504-4245-9945-55133EE6A1B5}
+		{D425C194-7CFA-4B13-AD8D-E2EFCCB4FD2B} = {1D61F505-062C-41C5-B7F6-6BE7CCDF4D42}
+		{97989B02-4A6D-43AF-9545-F21628190B52} = {1D61F505-062C-41C5-B7F6-6BE7CCDF4D42}
+		{14F41784-5816-4C08-8D4E-FCA796FB1D8F} = {97989B02-4A6D-43AF-9545-F21628190B52}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {76917B93-1E72-407C-98A2-E8C45E4EF39C}

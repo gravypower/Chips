@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{514C0311-8EF3-4128-8F10-EC927D12BEE0}</ProjectGuid>
+    <ProjectGuid>{14F41784-5816-4C08-8D4E-FCA796FB1D8F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Chips.Sitecore.ScheduledTasks</RootNamespace>
-    <AssemblyName>Chips.Sitecore.ScheduledTasks</AssemblyName>
+    <RootNamespace>Chips.Sitecore.ScheduledTasks.SimpleInjector</RootNamespace>
+    <AssemblyName>Chips.Sitecore.ScheduledTasks.SimpleInjector</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SimpleInjector, Version=4.3.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.4.3.0\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Kernel, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Kernel.NoReferences.9.0.171219\lib\NET462\Sitecore.Kernel.dll</HintPath>
     </Reference>
@@ -43,15 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractScheduleTaskResolver.cs" />
-    <Compile Include="IScheduleTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <Compile Include="ScheduleTaskResolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chips.DependencyInjection.SimpleInjector\Chips.DependencyInjection.SimpleInjector.csproj">
+      <Project>{359db7da-e1a9-47ca-b41b-d5c152c205ad}</Project>
+      <Name>Chips.DependencyInjection.SimpleInjector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chips.DependencyInjection\Chips.DependencyInjection.csproj">
+      <Project>{F0B2E57B-3F93-419F-9D66-B26A3751F8CC}</Project>
+      <Name>Chips.DependencyInjection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chips.Sitecore.ScheduledTasks\Chips.Sitecore.ScheduledTasks.csproj">
+      <Project>{514c0311-8ef3-4128-8f10-ec927d12bee0}</Project>
+      <Name>Chips.Sitecore.ScheduledTasks</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

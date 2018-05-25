@@ -2,7 +2,7 @@
 using SimpleInjector;
 using SimpleInjector.Diagnostics;
 
-namespace Chips.DependencyInjection.SimpleInjector.Extensions
+namespace Chips.DependencyInjection.SimpleInjector.MVC
 {
     public static class ContainerExtensions
     {
