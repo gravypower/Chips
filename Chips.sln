@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ApplicationC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ApplicationContainer.SimpleInjector", "Chips.Sitecore.ApplicationContainer.SimpleInjector\Chips.Sitecore.ApplicationContainer.SimpleInjector.csproj", "{E81287A8-4A24-452F-BDDA-B2A0BE9999A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ScheduledTasks", "Chips.Sitecore.ScheduledTasks\Chips.Sitecore.ScheduledTasks.csproj", "{514C0311-8EF3-4128-8F10-EC927D12BEE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{E81287A8-4A24-452F-BDDA-B2A0BE9999A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E81287A8-4A24-452F-BDDA-B2A0BE9999A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E81287A8-4A24-452F-BDDA-B2A0BE9999A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{514C0311-8EF3-4128-8F10-EC927D12BEE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{514C0311-8EF3-4128-8F10-EC927D12BEE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{514C0311-8EF3-4128-8F10-EC927D12BEE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{514C0311-8EF3-4128-8F10-EC927D12BEE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{359DB7DA-E1A9-47CA-B41B-D5C152C205AD} = {6F06BE1D-A504-4245-9945-55133EE6A1B5}
 		{AEA94422-EB92-4400-B551-FAD39B743C9B} = {1D61F505-062C-41C5-B7F6-6BE7CCDF4D42}
 		{E81287A8-4A24-452F-BDDA-B2A0BE9999A5} = {1D61F505-062C-41C5-B7F6-6BE7CCDF4D42}
+		{514C0311-8EF3-4128-8F10-EC927D12BEE0} = {1D61F505-062C-41C5-B7F6-6BE7CCDF4D42}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {76917B93-1E72-407C-98A2-E8C45E4EF39C}
