@@ -1,10 +1,9 @@
-﻿
-namespace Chips.Sitecore.ApplicationContainer.Tests
+﻿namespace Chips.Sitecore.ApplicationContainer.Tests
 {
     public class ApplicationSpy : ISitecoreApplication
     {
-        public static bool PreApplicationStartWasCalled = false;
-        public static bool ApplicationShutdownWasCalled = false;
+        public static bool PreApplicationStartWasCalled;
+        public static bool ApplicationShutdownWasCalled;
 
         public void PreApplicationStart()
         {

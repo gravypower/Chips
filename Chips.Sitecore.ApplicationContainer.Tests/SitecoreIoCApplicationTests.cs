@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using Chips.Sitecore.ApplicationContainer.Tests;
-using Gravypower.Kernel.Reflection;
+using Chips.Reflection;
+using Chips.Tests.Common;
 using NUnit.Framework;
-using SitecoreIoC.Tests.Common;
 
-namespace SitecoreIoC.Tests
+namespace Chips.Sitecore.ApplicationContainer.Tests
 {
     [TestFixture]
     public class SitecoreIoCApplicationTests
@@ -17,7 +16,7 @@ namespace SitecoreIoC.Tests
         {
             Isolated.Execute(() =>
             {
-                SitecoreIoCApplication.PreApplicationStart();
+                SitecoreApplication.PreApplicationStart();
                 Assert.That(ApplicationSpy.PreApplicationStartWasCalled, Is.True);
             });
         }
@@ -27,7 +26,7 @@ namespace SitecoreIoC.Tests
         {
             Isolated.Execute(() =>
             {
-                SitecoreIoCApplication.ApplicationShutdown();
+                SitecoreApplication.ApplicationShutdown();
                 Assert.That(ApplicationSpy.ApplicationShutdownWasCalled, Is.True);
             });
         }
@@ -41,44 +40,23 @@ namespace SitecoreIoC.Tests
             var extraAssemblies = new List<Assembly>
             {
                 typeBuilder.ModuleBuilder.Assembly,
-                typeof(IApplication).Assembly,
+                typeof(ISitecoreApplication).Assembly,
                 GetType().Assembly
             };
 
             Assert.Throws<MultipleApplicationFound>(() =>
-                Isolated.Execute(SitecoreIoCApplication.PreApplicationStart, extraAssemblies));
+                Isolated.Execute(SitecoreApplication.PreApplicationStart, extraAssemblies));
 
 #if !NCRUNCH
             File.Delete(applicationName + ".dll");
 #endif
         }
 
-        [Test]
-        public void WhenSitecoreIoCApplicationStartsIApplicationCreateNewApplicationIsCalled()
-        {
-            Isolated.Execute(() =>
-            {
-                SitecoreIoCApplication.GetControllerFactory();
-                Assert.That(ApplicationSpy.GetControllerFactoryWasCalled, Is.True);
-            });
-        }
-
-        [Test]
-        public void WhenProcessIsCalledOnInitialiseControllerFactoryGetControllerFactoryWasCalled()
-        {
-            Isolated.Execute(() =>
-            {
-                var initialiseControllerFactory = new InitialiseControllerFactory();
-                initialiseControllerFactory.Process(null);
-                Assert.That(ApplicationSpy.GetControllerFactoryWasCalled, Is.True);
-            });
-        }
-
         private static FluentTypeBuilder CreateNewApplication(string applicationName)
         {
             var typeBuilder = new FluentTypeBuilder(AppDomain.CurrentDomain)
                 .SetAssemblyName(applicationName)
-                .Implements<IApplication>()
+                .Implements<ISitecoreApplication>()
                 .ImplementInterface()
                 .SetTypeName(applicationName)
                 .CreateType()
