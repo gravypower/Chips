@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
-using Chips.DependencyInjection;
+using Chips.DependencyInjection.SimpleInjector;
 using SimpleInjector;
 
 namespace Chips.Sitecore.ApplicationContainer.SimpleInjector
@@ -11,8 +11,8 @@ namespace Chips.Sitecore.ApplicationContainer.SimpleInjector
         {
         }
 
-        protected override IController GetController(Type controllerType) => 
-            Bootstrapper<Container>.Container.GetInstance(controllerType) as IController;
+        protected override IController GetController(Type controllerType) =>
+            SimpleInjectorBootstrapper.Container.GetInstance(controllerType) as IController;
         
     }
 }

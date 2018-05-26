@@ -5,10 +5,10 @@ using System.Linq;
 namespace Chips.DependencyInjection
 {
     public abstract class Bootstrapper<TContainer>
-
     {
         protected abstract TContainer CreateContainer();
         protected abstract void VerifyContainer();
+
 
         public static TContainer Container { get; protected set; }
 
