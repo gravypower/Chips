@@ -8,7 +8,6 @@ namespace $rootnamespace$
     {
         public void Bootstrap(Container container)
         {
-            throw new NotImplementedException();
         }
     }
 }

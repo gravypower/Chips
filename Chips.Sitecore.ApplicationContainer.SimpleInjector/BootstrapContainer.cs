@@ -1,5 +1,4 @@
-﻿using System;
-using Chips.DependencyInjection;
+﻿using Chips.DependencyInjection;
 using SimpleInjector;
 
 namespace Chips.Sitecore.ApplicationContainer.SimpleInjector
@@ -8,7 +7,6 @@ namespace Chips.Sitecore.ApplicationContainer.SimpleInjector
     {
         public void Bootstrap(Container container)
         {
-            throw new NotImplementedException();
         }
     }
 }

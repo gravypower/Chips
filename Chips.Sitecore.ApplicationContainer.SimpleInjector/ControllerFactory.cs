@@ -13,6 +13,5 @@ namespace Chips.Sitecore.ApplicationContainer.SimpleInjector
 
         protected override IController GetController(Type controllerType) =>
             SimpleInjectorBootstrapper.Container.GetInstance(controllerType) as IController;
-        
     }
 }

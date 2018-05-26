@@ -1,9 +1,16 @@
-﻿using SimpleInjector;
+﻿using System.Collections.Generic;
+using System.Reflection;
+using SimpleInjector;
 
 namespace Chips.DependencyInjection.SimpleInjector
 {
     public class SimpleInjectorBootstrapper : Bootstrapper<Container>
     {
+
+        public SimpleInjectorBootstrapper(IEnumerable<Assembly> assembls) : base(assembls)
+        {
+        }
+
         protected override Container CreateContainer()
         {
             return new Container();

@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractScheduleTaskResolver.cs" />
+    <Compile Include="AbstractScheduleTaskContainerAdapter.cs" />
     <Compile Include="IScheduleTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
