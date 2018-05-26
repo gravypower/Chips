@@ -1,19 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\NuGet.Build.Packaging.0.2.5-dev.1\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.5-dev.1\build\NuGet.Build.Packaging.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E81287A8-4A24-452F-BDDA-B2A0BE9999A5}</ProjectGuid>
+    <ProjectGuid>{E5FA97F1-E9E6-4B23-9812-A8CFA1804888}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Chips.Sitecore.ApplicationContainer.SimpleInjector</RootNamespace>
-    <AssemblyName>Chips.Sitecore.ApplicationContainer.SimpleInjector</AssemblyName>
+    <RootNamespace>Chips.Sitecore.ApplicationContainer.Dryioc</RootNamespace>
+    <AssemblyName>Chips.Sitecore.ApplicationContainer.Dryioc</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,9 +33,6 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="SimpleInjector, Version=4.3.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleInjector.4.3.0\lib\net45\SimpleInjector.dll</HintPath>
-    </Reference>
     <Reference Include="Sitecore.Mvc, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Mvc.NoReferences.9.0.171219\lib\NET462\Sitecore.Mvc.dll</HintPath>
     </Reference>
@@ -51,7 +45,7 @@
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.6\lib\net45\System.Web.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
@@ -70,23 +64,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DryIocSitecoreApplication.cs" />
     <None Include="BootstrapContainer.cs" />
     <Compile Include="ControllerFactory.cs" />
     <Compile Include="InitialiseControllerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleinjectorSitecoreApplication.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Chips.DependencyInjection.SimpleInjector\Chips.DependencyInjection.SimpleInjector.csproj">
-      <Project>{359db7da-e1a9-47ca-b41b-d5c152c205ad}</Project>
-      <Name>Chips.DependencyInjection.SimpleInjector</Name>
+    <ProjectReference Include="..\Chips.DependencyInjection.DryIoc\Chips.DependencyInjection.DryIoc.csproj">
+      <Project>{823592b1-f422-4974-a1db-23f12a7c7288}</Project>
+      <Name>Chips.DependencyInjection.DryIoc</Name>
     </ProjectReference>
     <ProjectReference Include="..\Chips.DependencyInjection\Chips.DependencyInjection.csproj">
-      <Project>{F0B2E57B-3F93-419F-9D66-B26A3751F8CC}</Project>
+      <Project>{f0b2e57b-3f93-419f-9d66-b26a3751f8cc}</Project>
       <Name>Chips.DependencyInjection</Name>
     </ProjectReference>
     <ProjectReference Include="..\Chips.Sitecore.ApplicationContainer\Chips.Sitecore.ApplicationContainer.csproj">
@@ -94,16 +85,5 @@
       <Name>Chips.Sitecore.ApplicationContainer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\NuGet.Build.Packaging.0.2.5-dev.1\build\NuGet.Build.Packaging.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NuGet.Build.Packaging.0.2.5-dev.1\build\NuGet.Build.Packaging.props'))" />
-    <Error Condition="!Exists('..\packages\NuGet.Build.Packaging.0.2.5-dev.1\build\NuGet.Build.Packaging.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NuGet.Build.Packaging.0.2.5-dev.1\build\NuGet.Build.Packaging.targets'))" />
-  </Target>
-  <Import Project="..\packages\NuGet.Build.Packaging.0.2.5-dev.1\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.5-dev.1\build\NuGet.Build.Packaging.targets')" />
 </Project>
