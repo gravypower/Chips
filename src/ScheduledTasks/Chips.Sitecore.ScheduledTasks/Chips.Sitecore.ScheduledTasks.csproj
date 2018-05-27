@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Packaging">
-      <Version>0.2.5-dev.1</Version>
+      <Version>0.2.5-pr160.1</Version>
     </PackageReference>
     <PackageReference Include="Sitecore.Kernel.NoReferences">
       <Version>9.0.171219</Version>
