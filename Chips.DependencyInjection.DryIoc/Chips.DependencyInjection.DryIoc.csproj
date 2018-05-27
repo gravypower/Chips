@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="DryIoc" Version="3.0.0-preview-11" />
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.5-dev.1" />
   </ItemGroup>
 
   <ItemGroup>

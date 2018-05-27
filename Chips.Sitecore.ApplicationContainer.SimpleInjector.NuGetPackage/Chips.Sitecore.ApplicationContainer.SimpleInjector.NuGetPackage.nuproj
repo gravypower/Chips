@@ -34,6 +34,9 @@
       <Version>0.2.5-dev.1</Version>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="SimpleInjector">
+      <Version>4.3.0</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Chips.Sitecore.ApplicationContainer.SimpleInjector\Chips.Sitecore.ApplicationContainer.SimpleInjector.csproj" />
