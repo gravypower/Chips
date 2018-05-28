@@ -28,17 +28,17 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'" />
   <ItemGroup>
-    <PackageReference Include="NuGet.Build.Packaging">
-      <Version>0.2.5-pr160.1</Version>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
     <PackageFile Include="Content\App_Config\Include\Z.Chips\Chips.Sitecore.ApplicationContainer.config" />
     <PackageFile Include="Content\BootstrapContainer.cs.pp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\ApplicationContainer\Chips.Sitecore.ApplicationContainer.Dryioc\Chips.Sitecore.ApplicationContainer.DryIoc.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.2.5-pr160.1</Version>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />

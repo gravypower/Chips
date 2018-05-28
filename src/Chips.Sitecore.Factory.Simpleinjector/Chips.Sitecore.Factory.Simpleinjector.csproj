@@ -4,15 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{61AFFD9F-5E0D-433B-B5DC-E005A1C0E8FD}</ProjectGuid>
+    <ProjectGuid>{542572AC-F809-41C9-9D44-7089F5F0E545}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClassLibrary1</RootNamespace>
-    <AssemblyName>ClassLibrary1</AssemblyName>
+    <RootNamespace>Chips.Sitecore.Factory.Simpleinjector</RootNamespace>
+    <AssemblyName>Chips.Sitecore.Factory.Simpleinjector</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,15 +40,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="FactoryContainerAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DependencyInjection\Chips.DependencyInjection.SimpleInjector\Chips.DependencyInjection.SimpleInjector.csproj">
+      <Project>{359db7da-e1a9-47ca-b41b-d5c152c205ad}</Project>
+      <Name>Chips.DependencyInjection.SimpleInjector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DependencyInjection\Chips.DependencyInjection\Chips.DependencyInjection.csproj">
+      <Project>{f0b2e57b-3f93-419f-9d66-b26a3751f8cc}</Project>
+      <Name>Chips.DependencyInjection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Factory\Chips.Sitecore.Factory\Chips.Sitecore.Factory.csproj">
+      <Project>{6318977c-9d67-4c11-aa4e-55d3b8b91e41}</Project>
+      <Name>Chips.Sitecore.Factory</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Packaging">
       <Version>0.2.5-pr160.1</Version>
     </PackageReference>
-    <PackageReference Include="NUnit">
-      <Version>3.10.1</Version>
+    <PackageReference Include="SimpleInjector">
+      <Version>4.3.0</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
