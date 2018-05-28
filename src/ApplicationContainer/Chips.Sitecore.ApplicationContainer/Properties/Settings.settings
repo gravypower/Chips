@@ -1,0 +1,25 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Chips.Sitecore.ApplicationContainer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="IgnoreProductList" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;YUI Compressor&lt;/string&gt;
+  &lt;string&gt;Microsoft.AspNet.Identity.Owin&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="IgnoreCompaniesList" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Sitecore Corporation A/S.&lt;/string&gt;
+  &lt;string&gt;Microsoft&lt;/string&gt;
+  &lt;string&gt;Microsoft Corporation&lt;/string&gt;
+  &lt;string&gt;Microsoft Corporation.&lt;/string&gt;
+  &lt;string&gt;MongoDB Inc.&lt;/string&gt;
+  &lt;string&gt;.NET Foundation and Contributors.&lt;/string&gt;
+  &lt;string&gt;Newtonsoft&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

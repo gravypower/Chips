@@ -1,6 +1,5 @@
 ﻿using System;
 using Chips.DependencyInjection;
-using SimpleInjector;
 
 namespace $rootnamespace$
 {

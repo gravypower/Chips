@@ -33,7 +33,7 @@
     <ProjectReference Include="..\..\Chips.Sitecore.Factory.DryIoc\Chips.Sitecore.Factory.DryIoc.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageFile Include="Content\App_Config\Include\Z.Chips\Chips.Sitecore.Factory.Simpleinjector.config" />
+    <PackageFile Include="Content\App_Config\Include\Z.Chips\Chips.Sitecore.Factory.DryIoc.config" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Packaging">

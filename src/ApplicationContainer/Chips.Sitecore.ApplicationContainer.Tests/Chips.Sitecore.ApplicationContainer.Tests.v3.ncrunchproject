@@ -4,5 +4,6 @@
     <HiddenComponentWarnings>
       <Value>CopyReferencedAssembliesToWorkspaceIsOn</Value>
     </HiddenComponentWarnings>
+    <IgnoreThisComponentCompletely>False</IgnoreThisComponentCompletely>
   </Settings>
 </ProjectConfiguration>

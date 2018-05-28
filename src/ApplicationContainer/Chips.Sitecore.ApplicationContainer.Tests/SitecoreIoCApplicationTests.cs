@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using Chips.Reflection;
+using Chips.Sitecore.ApplicationContainer.Exceptions;
 using Chips.Tests.Common;
 using NUnit.Framework;
 

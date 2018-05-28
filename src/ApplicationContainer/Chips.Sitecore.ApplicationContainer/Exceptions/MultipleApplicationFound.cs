@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace Chips.Sitecore.ApplicationContainer
+namespace Chips.Sitecore.ApplicationContainer.Exceptions
 {
     [Serializable]
     public class MultipleApplicationFound : Exception
@@ -29,7 +29,7 @@ namespace Chips.Sitecore.ApplicationContainer
         }
 
         public MultipleApplicationFound(IEnumerable<Type> applications)
-            : this(String.Join(", ", applications))
+            : this(string.Join(", ", applications))
         {
         }
     }

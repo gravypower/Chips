@@ -71,6 +71,9 @@
     <PackageReference Include="NUnit">
       <Version>3.10.1</Version>
     </PackageReference>
+    <PackageReference Include="Sitecore.Mvc">
+      <Version>9.0.171219</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

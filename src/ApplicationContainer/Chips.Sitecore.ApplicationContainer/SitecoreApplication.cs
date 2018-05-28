@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Chips.Sitecore.ApplicationContainer;
+using Chips.Sitecore.ApplicationContainer.Exceptions;
+using Chips.Sitecore.ApplicationContainer.Properties;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(SitecoreApplication), "PreApplicationStart")]
 [assembly: WebActivatorEx.ApplicationShutdownMethod(typeof(SitecoreApplication), "ApplicationShutdown")]
@@ -10,23 +12,6 @@ namespace Chips.Sitecore.ApplicationContainer
 {
     public class SitecoreApplication
     {
-        private static readonly List<string> IgnoreProductList = new List<string>
-        {
-            "YUI Compressor",
-            "Microsoft.AspNet.Identity.Owin"
-        };
-
-        private static readonly List<string> IgnoreCompaniesList = new List<string>
-        {
-            "Sitecore Corporation A/S.",
-            "Microsoft",
-            "Microsoft Corporation",
-            "Microsoft Corporation.",
-            "MongoDB Inc.",
-            ".NET Foundation and Contributors.",
-            "Newtonsoft"
-        };
-
         public static readonly IEnumerable<Assembly> ApplicationAssemblies;
         private static readonly ISitecoreApplication Application;
 
@@ -34,8 +19,8 @@ namespace Chips.Sitecore.ApplicationContainer
         {
             ApplicationAssemblies = AppDomain.CurrentDomain.GetAssemblies()
                 .Where(a => !a.IsDynamic)
-                .Where(a => !IgnoreProductList.Contains(a.GetAssemblyAttribute<AssemblyProductAttribute>(ass => ass.Product)))
-                .Where(a => !IgnoreCompaniesList.Contains(a.GetAssemblyAttribute<AssemblyCompanyAttribute>(ass => ass.Company)));
+                .Where(a => !Settings.Default.IgnoreProductList.Contains(a.GetAssemblyAttribute<AssemblyProductAttribute>(ass => ass.Product)))
+                .Where(a => !Settings.Default.IgnoreCompaniesList.Contains(a.GetAssemblyAttribute<AssemblyCompanyAttribute>(ass => ass.Company)));
 
             var applications = ApplicationAssemblies.SelectMany(a => a.GetTypes())
                 .Where(t => !t.IsInterface)
@@ -54,9 +39,9 @@ namespace Chips.Sitecore.ApplicationContainer
                         throw new MultipleApplicationFound(applications);
                     case "Sequence contains no elements":
                         throw new NoApplicationFound();
+                    default:
+                        throw;
                 }
-
-                throw;
             }
             catch (ReflectionTypeLoadException re)
             {

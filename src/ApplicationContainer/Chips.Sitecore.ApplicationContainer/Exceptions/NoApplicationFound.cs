@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Chips.Sitecore.ApplicationContainer
+namespace Chips.Sitecore.ApplicationContainer.Exceptions
 {
     [Serializable]
     public class NoApplicationFound : Exception

@@ -28,7 +28,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'" />
   <ItemGroup>
-    <PackageFile Include="Content\App_Config\Include\Z.Chips\Chips.Sitecore.ApplicationContainer.config" />
+    <PackageFile Include="Content\App_Config\Include\Z.Chips\Chips.Sitecore.ApplicationContainer.DryIoc.config" />
     <PackageFile Include="Content\BootstrapContainer.cs.pp" />
   </ItemGroup>
   <ItemGroup>
