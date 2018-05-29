@@ -2,7 +2,7 @@
 
 namespace Chips.Sitecore.ApplicationContainer.SimpleInjector
 {
-    public class SimpleinjectorApplication : ISitecoreApplication
+    public class SimpleinjectorSitecoreApplication : ISitecoreApplication
     {
         public void PreApplicationStart()
         {

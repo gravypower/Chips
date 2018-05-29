@@ -57,12 +57,13 @@ namespace Chips.Sitecore.ApplicationContainer
 
         public static void PreApplicationStart()
         {
-            global::Sitecore.Diagnostics.Log.Info($"Starting {Application.GetType().FullName}", Application);
+            global::Sitecore.Diagnostics.Log.Info($"Starting up {Application.GetType().FullName}", Application);
             Application.PreApplicationStart();
         }
 
         public static void ApplicationShutdown()
         {
+            global::Sitecore.Diagnostics.Log.Info($"Shutting down {Application.GetType().FullName}", Application);
             Application.ApplicationShutdown();
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using FluentAssertions;
 using NUnit.Framework;
 
 namespace Chips.Reflection.Tests
@@ -10,21 +11,27 @@ namespace Chips.Reflection.Tests
         [Test]
         public void BuiltTypeImplementsITest()
         {
+            //Assign
             var typeBuilder = new FluentTypeBuilder(AppDomain.CurrentDomain)
                 .SetAssemblyName("Test")
                 .Implements<ITest>();
 
-            typeBuilder
-                .SetTypeName("Test").CreateType();
+            typeBuilder.SetTypeName("Test").CreateType();
 
             var assembly = typeBuilder.ModuleBuilder.Assembly;
+
+            //Act
             var definedTypes = assembly.DefinedTypes.Single(x => x.FullName == "Test");
-            Assert.That(definedTypes.ImplementedInterfaces, Contains.Item(typeof(ITest)));
+
+            //Assert
+            definedTypes.ImplementedInterfaces.Should().Contain(typeof(ITest));
         }
 
         [Test]
         public void BuiltTypeImplementsITestHasMethods()
         {
+
+            //Assign
             var typeBuilder = new FluentTypeBuilder(AppDomain.CurrentDomain)
                 .SetAssemblyName("Test")
                 .Implements<ITestMethods>()
@@ -34,28 +41,33 @@ namespace Chips.Reflection.Tests
                 .SetTypeName("Test").CreateType();
 
             var assembly = typeBuilder.ModuleBuilder.Assembly;
+
+            //Act
             var definedTypes = assembly.DefinedTypes.Single(x => x.FullName == "Test");
-            Assert.That(definedTypes.ImplementedInterfaces, Contains.Item(typeof(ITestMethods)));
+
+            //Assert
+            definedTypes.ImplementedInterfaces.Should().Contain(typeof(ITestMethods));
         }
 
         [Test]
         public void GivenEmittedClassITestMethodsImplementsCanCallMethodThatReturnsAString()
         {
+            //Assign
             var typeBuilder = new FluentTypeBuilder(AppDomain.CurrentDomain)
                 .SetAssemblyName("Test")
                 .Implements<ITestMethods>()
                 .ImplementInterface();
 
-            typeBuilder
-                .SetTypeName("Test").CreateType().Save();
+            typeBuilder.SetTypeName("Test").CreateType().Save();
 
             var assembly = typeBuilder.ModuleBuilder.Assembly;
 
+            //Act
             var testMethods = (ITestMethods)assembly.CreateInstance("Test");
 
-            testMethods.SomeOtherMethod();
+            //Act
+            testMethods.GetType().GetMethod("SomeOtherMethod").ReturnType.Should().Be<string>();
         }
-
     }
 
     public interface ITest { }

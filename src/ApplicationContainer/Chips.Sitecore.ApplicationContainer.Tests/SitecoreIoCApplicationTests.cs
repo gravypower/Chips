@@ -5,6 +5,7 @@ using System.Reflection;
 using Chips.Reflection;
 using Chips.Sitecore.ApplicationContainer.Exceptions;
 using Chips.Tests.Common;
+using FluentAssertions;
 using NUnit.Framework;
 
 namespace Chips.Sitecore.ApplicationContainer.Tests
@@ -17,8 +18,11 @@ namespace Chips.Sitecore.ApplicationContainer.Tests
         {
             Isolated.Execute(() =>
             {
+                //Act
                 SitecoreApplication.PreApplicationStart();
-                Assert.That(ApplicationSpy.PreApplicationStartWasCalled, Is.True);
+
+                //Assert
+                ApplicationSpy.PreApplicationStartWasCalled.Should().BeTrue();
             });
         }
 
@@ -27,16 +31,26 @@ namespace Chips.Sitecore.ApplicationContainer.Tests
         {
             Isolated.Execute(() =>
             {
+                //Act
                 SitecoreApplication.ApplicationShutdown();
-                Assert.That(ApplicationSpy.ApplicationShutdownWasCalled, Is.True);
+
+                //Assert
+                ApplicationSpy.ApplicationShutdownWasCalled.Should().BeTrue();
             });
         }
 
         [Test]
         public void Isolated_WhenMoreThanOneApplicationExitsMultipleApplicationFoundThrown()
         {
+            //Assign
             var applicationName = MethodBase.GetCurrentMethod().Name;
-            var typeBuilder = CreateNewApplication(applicationName);
+            var typeBuilder = new FluentTypeBuilder(AppDomain.CurrentDomain)
+                .SetAssemblyName(applicationName)
+                .Implements<ISitecoreApplication>()
+                .ImplementInterface()
+                .SetTypeName(applicationName)
+                .CreateType()
+                .Save();
 
             var extraAssemblies = new List<Assembly>
             {
@@ -45,24 +59,20 @@ namespace Chips.Sitecore.ApplicationContainer.Tests
                 GetType().Assembly
             };
 
-            Assert.Throws<MultipleApplicationFound>(() =>
-                Isolated.Execute(SitecoreApplication.PreApplicationStart, extraAssemblies));
 
+            //Act
+            Action multipleApplications = () =>
+            {
+                Isolated.Execute(SitecoreApplication.PreApplicationStart, extraAssemblies);
+            };
+
+            //Assert
+            multipleApplications.Should().Throw<MultipleApplicationFound>();
+
+            //Annihilate
 #if !NCRUNCH
             File.Delete(applicationName + ".dll");
 #endif
-        }
-
-        private static FluentTypeBuilder CreateNewApplication(string applicationName)
-        {
-            var typeBuilder = new FluentTypeBuilder(AppDomain.CurrentDomain)
-                .SetAssemblyName(applicationName)
-                .Implements<ISitecoreApplication>()
-                .ImplementInterface()
-                .SetTypeName(applicationName)
-                .CreateType()
-                .Save();
-            return typeBuilder;
         }
     }
 }

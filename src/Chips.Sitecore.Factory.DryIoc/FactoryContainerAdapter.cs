@@ -6,9 +6,6 @@ namespace Chips.Sitecore.Factory.DryIoc
 {
     public class FactoryContainerAdapter: AbstractFactoryContainerAdapter
     {
-        protected override object ResolveType(Type type)
-        {
-            return DryIocBootstrapper.Container.Resolve(type);
-        }
+        protected override object ResolveType(Type type) => DryIocBootstrapper.Container.Resolve(type);
     }
 }

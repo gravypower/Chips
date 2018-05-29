@@ -2,7 +2,7 @@
 
 namespace Chips.Sitecore.ApplicationContainer.DryIoc
 {
-    public class DryiocApplication : ISitecoreApplication
+    public class DryiocSitecoreApplication : ISitecoreApplication
     {
         public void PreApplicationStart()
         {
@@ -10,9 +10,7 @@ namespace Chips.Sitecore.ApplicationContainer.DryIoc
             bootstrapper.Bootstrap();
         }
 
-        public void ApplicationShutdown()
-        {
-            DryIocBootstrapper.Container.Dispose();
-        }
+        public void ApplicationShutdown() 
+            => DryIocBootstrapper.Container.Dispose();
     }
 }

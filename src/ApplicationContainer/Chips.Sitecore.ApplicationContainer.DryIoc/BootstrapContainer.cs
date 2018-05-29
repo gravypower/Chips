@@ -1,4 +1,5 @@
 ﻿using Chips.DependencyInjection;
+using DryIoc;
 
 namespace Chips.Sitecore.ApplicationContainer.DryIoc
 {

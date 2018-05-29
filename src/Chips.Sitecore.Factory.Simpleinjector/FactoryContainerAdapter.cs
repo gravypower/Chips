@@ -5,9 +5,6 @@ namespace Chips.Sitecore.Factory.Simpleinjector
 {
     public class FactoryContainerAdapter: AbstractFactoryContainerAdapter
     {
-        protected override object ResolveType(Type type)
-        {
-            return SimpleInjectorBootstrapper.Container.GetInstance(type);
-        }
+        protected override object ResolveType(Type type)=> SimpleInjectorBootstrapper.Container.GetInstance(type);
     }
 }
