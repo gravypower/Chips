@@ -46,11 +46,11 @@
     <Compile Include="ScheduleTaskContainerAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DependencyInjection\Chips.DependencyInjection.SimpleInjector\Chips.DependencyInjection.SimpleInjector.csproj">
+    <ProjectReference Include="..\..\..\DependencyInjection\Chips.DependencyInjection.SimpleInjector\Chips.DependencyInjection.SimpleInjector.csproj">
       <Project>{359db7da-e1a9-47ca-b41b-d5c152c205ad}</Project>
       <Name>Chips.DependencyInjection.SimpleInjector</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\DependencyInjection\Chips.DependencyInjection\Chips.DependencyInjection.csproj">
+    <ProjectReference Include="..\..\..\DependencyInjection\Chips.DependencyInjection\Chips.DependencyInjection.csproj">
       <Project>{F0B2E57B-3F93-419F-9D66-B26A3751F8CC}</Project>
       <Name>Chips.DependencyInjection</Name>
     </ProjectReference>

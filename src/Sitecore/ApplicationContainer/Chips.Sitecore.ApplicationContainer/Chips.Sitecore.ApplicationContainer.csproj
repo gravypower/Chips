@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DAFB317E-889F-4AD4-9B3F-F26F07D48FE3}</ProjectGuid>
+    <ProjectGuid>{AEA94422-EB92-4400-B551-FAD39B743C9B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Chips.Sitecore.ScheduledTasks.DryIoc</RootNamespace>
-    <AssemblyName>Chips.Sitecore.ScheduledTasks.DryIoc</AssemblyName>
+    <RootNamespace>Chips.Sitecore.ApplicationContainer</RootNamespace>
+    <AssemblyName>Chips.Sitecore.ApplicationContainer</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,27 +43,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyExtensions.cs" />
+    <Compile Include="ISitecoreApplication.cs" />
+    <Compile Include="InitialiseControllerFactory.cs" />
+    <Compile Include="Exceptions\MultipleApplicationFound.cs" />
+    <Compile Include="Exceptions\NoApplicationFound.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScheduleTaskContainerAdapter.cs" />
+    <Compile Include="ControllerFactory.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SitecoreApplication.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DependencyInjection\Chips.DependencyInjection.DryIoc\Chips.DependencyInjection.DryIoc.csproj">
-      <Project>{823592B1-F422-4974-A1DB-23F12A7C7288}</Project>
-      <Name>Chips.DependencyInjection.DryIoc</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\DependencyInjection\Chips.DependencyInjection\Chips.DependencyInjection.csproj">
+    <ProjectReference Include="..\..\..\DependencyInjection\Chips.DependencyInjection\Chips.DependencyInjection.csproj">
       <Project>{f0b2e57b-3f93-419f-9d66-b26a3751f8cc}</Project>
       <Name>Chips.DependencyInjection</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Chips.Sitecore.ScheduledTasks\Chips.Sitecore.ScheduledTasks.csproj">
-      <Project>{514c0311-8ef3-4128-8f10-ec927d12bee0}</Project>
-      <Name>Chips.Sitecore.ScheduledTasks</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Mvc">
+      <Version>5.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.Razor">
+      <Version>3.2.6</Version>
+    </PackageReference>
     <PackageReference Include="NuGet.Build.Packaging">
       <Version>0.2.5-pr160.1</Version>
     </PackageReference>
+    <PackageReference Include="Sitecore.Kernel.NoReferences">
+      <Version>9.0.171219</Version>
+    </PackageReference>
+    <PackageReference Include="Sitecore.Mvc.NoReferences">
+      <Version>9.0.171219</Version>
+    </PackageReference>
+    <PackageReference Include="WebActivatorEx">
+      <Version>2.2.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

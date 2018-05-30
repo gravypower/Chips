@@ -37,7 +37,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ApplicationContainer\Chips.Sitecore.ApplicationContainer.SimpleInjector\Chips.Sitecore.ApplicationContainer.SimpleInjector.csproj" />
+    <ProjectReference Include="..\..\Sitecore\ApplicationContainer\Chips.Sitecore.ApplicationContainer.SimpleInjector\Chips.Sitecore.ApplicationContainer.SimpleInjector.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageFile Include="Content\App_Config\Include\Z.Chips\Chips.Sitecore.ApplicationContainer.Simpleinjector.config" />

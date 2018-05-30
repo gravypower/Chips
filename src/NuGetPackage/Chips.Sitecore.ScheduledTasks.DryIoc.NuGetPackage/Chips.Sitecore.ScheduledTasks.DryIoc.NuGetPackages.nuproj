@@ -28,7 +28,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'" />
   <ItemGroup>
-    <ProjectReference Include="..\..\ScheduledTasks\Chips.Sitecore.ScheduledTasks.Dryioc\Chips.Sitecore.ScheduledTasks.DryIoc.csproj" />
+    <ProjectReference Include="..\..\Sitecore\ScheduledTasks\Chips.Sitecore.ScheduledTasks.Dryioc\Chips.Sitecore.ScheduledTasks.DryIoc.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Packaging">
@@ -40,9 +40,9 @@
     <Folder Include="Content\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Chips.Sitecore.ScheduledTasks.SimpleInjector.NuGetPackage\Content\SampleScheduledTask.cs.pp">
+    <PackageFile Include="..\Chips.Sitecore.ScheduledTasks.SimpleInjector.NuGetPackage\Content\SampleScheduledTask.cs.pp">
       <Link>Content\SampleScheduledTask.cs.pp</Link>
-    </None>
+    </PackageFile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />

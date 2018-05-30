@@ -11,11 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chips.DependencyInjection.S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sitecore", "Sitecore", "{1D61F505-062C-41C5-B7F6-6BE7CCDF4D42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ApplicationContainer", "ApplicationContainer\Chips.Sitecore.ApplicationContainer\Chips.Sitecore.ApplicationContainer.csproj", "{AEA94422-EB92-4400-B551-FAD39B743C9B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ApplicationContainer", "Sitecore\ApplicationContainer\Chips.Sitecore.ApplicationContainer\Chips.Sitecore.ApplicationContainer.csproj", "{AEA94422-EB92-4400-B551-FAD39B743C9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ApplicationContainer.SimpleInjector", "ApplicationContainer\Chips.Sitecore.ApplicationContainer.SimpleInjector\Chips.Sitecore.ApplicationContainer.SimpleInjector.csproj", "{E81287A8-4A24-452F-BDDA-B2A0BE9999A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ApplicationContainer.SimpleInjector", "Sitecore\ApplicationContainer\Chips.Sitecore.ApplicationContainer.SimpleInjector\Chips.Sitecore.ApplicationContainer.SimpleInjector.csproj", "{E81287A8-4A24-452F-BDDA-B2A0BE9999A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ScheduledTasks", "ScheduledTasks\Chips.Sitecore.ScheduledTasks\Chips.Sitecore.ScheduledTasks.csproj", "{514C0311-8EF3-4128-8F10-EC927D12BEE0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ScheduledTasks", "Sitecore\ScheduledTasks\Chips.Sitecore.ScheduledTasks\Chips.Sitecore.ScheduledTasks.csproj", "{514C0311-8EF3-4128-8F10-EC927D12BEE0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.DependencyInjection.SimpleInjector.MVC", "DependencyInjection\Chips.DependencyInjection.SimpleInjector.MVC\Chips.DependencyInjection.SimpleInjector.MVC.csproj", "{90253AC9-84F5-4278-A5E6-496B9F58C1FC}"
 EndProject
@@ -23,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationContainer", "App
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScheduledTasks", "ScheduledTasks", "{97989B02-4A6D-43AF-9545-F21628190B52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ScheduledTasks.SimpleInjector", "ScheduledTasks\Chips.Sitecore.ScheduledTasks.SimpleInjector\Chips.Sitecore.ScheduledTasks.SimpleInjector.csproj", "{14F41784-5816-4C08-8D4E-FCA796FB1D8F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ScheduledTasks.SimpleInjector", "Sitecore\ScheduledTasks\Chips.Sitecore.ScheduledTasks.SimpleInjector\Chips.Sitecore.ScheduledTasks.SimpleInjector.csproj", "{14F41784-5816-4C08-8D4E-FCA796FB1D8F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reflection", "Reflection", "{54BF8E43-C604-46FC-8642-CEDB6A5D0794}"
 EndProject
@@ -35,7 +35,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{762CF7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Tests.Common", "Chips.Tests.Common\Chips.Tests.Common.csproj", "{642CF615-0DA6-472E-AE2C-48E699E3DCE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ApplicationContainer.Tests", "ApplicationContainer\Chips.Sitecore.ApplicationContainer.Tests\Chips.Sitecore.ApplicationContainer.Tests.csproj", "{28561366-E62A-4A9A-897E-8D85E7A89C6B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ApplicationContainer.Tests", "Sitecore\ApplicationContainer\Chips.Sitecore.ApplicationContainer.Tests\Chips.Sitecore.ApplicationContainer.Tests.csproj", "{28561366-E62A-4A9A-897E-8D85E7A89C6B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGetPackages", "NuGetPackages", "{41666BBF-BC0E-4291-89D8-56CDB28F5BFC}"
 EndProject
@@ -47,9 +47,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DryIoc", "DryIoc", "{C5F4EB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chips.DependencyInjection.DryIoc", "DependencyInjection\Chips.DependencyInjection.DryIoc\Chips.DependencyInjection.DryIoc.csproj", "{823592B1-F422-4974-A1DB-23F12A7C7288}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ApplicationContainer.DryIoc", "ApplicationContainer\Chips.Sitecore.ApplicationContainer.Dryioc\Chips.Sitecore.ApplicationContainer.DryIoc.csproj", "{E5FA97F1-E9E6-4B23-9812-A8CFA1804888}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ApplicationContainer.DryIoc", "Sitecore\ApplicationContainer\Chips.Sitecore.ApplicationContainer.Dryioc\Chips.Sitecore.ApplicationContainer.DryIoc.csproj", "{E5FA97F1-E9E6-4B23-9812-A8CFA1804888}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ScheduledTasks.DryIoc", "ScheduledTasks\Chips.Sitecore.ScheduledTasks.Dryioc\Chips.Sitecore.ScheduledTasks.DryIoc.csproj", "{DAFB317E-889F-4AD4-9B3F-F26F07D48FE3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.ScheduledTasks.DryIoc", "Sitecore\ScheduledTasks\Chips.Sitecore.ScheduledTasks.Dryioc\Chips.Sitecore.ScheduledTasks.DryIoc.csproj", "{DAFB317E-889F-4AD4-9B3F-F26F07D48FE3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleInjector", "SimpleInjector", "{EACC34C5-A221-4327-8E82-EE91DD0A553E}"
 EndProject
@@ -63,15 +63,17 @@ Project("{5DD5E4FA-CB73-4610-85AB-557B54E96AA9}") = "Chips.Sitecore.ApplicationC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Factory", "Factory", "{4A5AC377-8F70-4A59-8BE5-DDE3DEFF4007}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.Factory", "Factory\Chips.Sitecore.Factory\Chips.Sitecore.Factory.csproj", "{6318977C-9D67-4C11-AA4E-55D3B8B91E41}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.Factory", "Sitecore\Factory\Chips.Sitecore.Factory\Chips.Sitecore.Factory.csproj", "{6318977C-9D67-4C11-AA4E-55D3B8B91E41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.Factory.Simpleinjector", "Chips.Sitecore.Factory.Simpleinjector\Chips.Sitecore.Factory.Simpleinjector.csproj", "{542572AC-F809-41C9-9D44-7089F5F0E545}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.Factory.Simpleinjector", "Sitecore\Factory\Chips.Sitecore.Factory.Simpleinjector\Chips.Sitecore.Factory.Simpleinjector.csproj", "{542572AC-F809-41C9-9D44-7089F5F0E545}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.Factory.DryIoc", "Chips.Sitecore.Factory.DryIoc\Chips.Sitecore.Factory.DryIoc.csproj", "{774B0ED6-E711-4871-9047-EBA6CE376028}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.Factory.DryIoc", "Sitecore\Factory\Chips.Sitecore.Factory.DryIoc\Chips.Sitecore.Factory.DryIoc.csproj", "{774B0ED6-E711-4871-9047-EBA6CE376028}"
 EndProject
 Project("{5DD5E4FA-CB73-4610-85AB-557B54E96AA9}") = "Chips.Sitecore.Factory.DryIoc.NuGetPackages", "NuGetPackage\Chips.Sitecore.Factory.DryIoc\Chips.Sitecore.Factory.DryIoc.NuGetPackages.nuproj", "{7D4ED5F3-6DE5-4A5A-B292-22352C20D806}"
 EndProject
 Project("{5DD5E4FA-CB73-4610-85AB-557B54E96AA9}") = "Chips.Sitecore.Factory.Simpleinjector.NuGetPackages", "NuGetPackage\Chips.Sitecore.Factory.Simpleinjector\Chips.Sitecore.Factory.Simpleinjector.NuGetPackages.nuproj", "{5966E1CF-4AD3-4C70-87AC-56890DAC1DDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.DependencyInjection.Tests", "DependencyInjection\Chips.DependencyInjection.Tests\Chips.DependencyInjection.Tests.csproj", "{B91A1BD9-8357-49AF-B0FC-878DAA0F87FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -171,6 +173,10 @@ Global
 		{5966E1CF-4AD3-4C70-87AC-56890DAC1DDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5966E1CF-4AD3-4C70-87AC-56890DAC1DDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5966E1CF-4AD3-4C70-87AC-56890DAC1DDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B91A1BD9-8357-49AF-B0FC-878DAA0F87FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B91A1BD9-8357-49AF-B0FC-878DAA0F87FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B91A1BD9-8357-49AF-B0FC-878DAA0F87FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B91A1BD9-8357-49AF-B0FC-878DAA0F87FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -206,6 +212,7 @@ Global
 		{774B0ED6-E711-4871-9047-EBA6CE376028} = {4A5AC377-8F70-4A59-8BE5-DDE3DEFF4007}
 		{7D4ED5F3-6DE5-4A5A-B292-22352C20D806} = {3CFA9911-14CE-4706-B268-09E1FBA3130D}
 		{5966E1CF-4AD3-4C70-87AC-56890DAC1DDE} = {EACC34C5-A221-4327-8E82-EE91DD0A553E}
+		{B91A1BD9-8357-49AF-B0FC-878DAA0F87FA} = {6F06BE1D-A504-4245-9945-55133EE6A1B5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45

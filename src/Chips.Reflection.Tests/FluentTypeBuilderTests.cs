@@ -30,7 +30,6 @@ namespace Chips.Reflection.Tests
         [Test]
         public void BuiltTypeImplementsITestHasMethods()
         {
-
             //Assign
             var typeBuilder = new FluentTypeBuilder(AppDomain.CurrentDomain)
                 .SetAssemblyName("Test")
@@ -60,10 +59,8 @@ namespace Chips.Reflection.Tests
 
             typeBuilder.SetTypeName("Test").CreateType().Save();
 
-            var assembly = typeBuilder.ModuleBuilder.Assembly;
-
             //Act
-            var testMethods = (ITestMethods)assembly.CreateInstance("Test");
+            var testMethods = typeBuilder.CreateInstance();
 
             //Act
             testMethods.GetType().GetMethod("SomeOtherMethod").ReturnType.Should().Be<string>();

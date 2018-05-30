@@ -32,7 +32,7 @@
     <PackageFile Include="Content\BootstrapContainer.cs.pp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ApplicationContainer\Chips.Sitecore.ApplicationContainer.Dryioc\Chips.Sitecore.ApplicationContainer.DryIoc.csproj" />
+    <ProjectReference Include="..\..\Sitecore\ApplicationContainer\Chips.Sitecore.ApplicationContainer.Dryioc\Chips.Sitecore.ApplicationContainer.DryIoc.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Packaging">

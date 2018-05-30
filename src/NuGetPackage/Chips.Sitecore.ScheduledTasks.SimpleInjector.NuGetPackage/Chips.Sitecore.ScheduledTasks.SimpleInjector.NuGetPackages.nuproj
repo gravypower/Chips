@@ -37,7 +37,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ScheduledTasks\Chips.Sitecore.ScheduledTasks.SimpleInjector\Chips.Sitecore.ScheduledTasks.SimpleInjector.csproj" />
+    <ProjectReference Include="..\..\Sitecore\ScheduledTasks\Chips.Sitecore.ScheduledTasks.SimpleInjector\Chips.Sitecore.ScheduledTasks.SimpleInjector.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageFile Include="Content\SampleScheduledTask.cs.pp" />
