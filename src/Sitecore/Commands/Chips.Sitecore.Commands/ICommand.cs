@@ -1,9 +1,9 @@
 ﻿using Sitecore.Data.Items;
 using Sitecore.Tasks;
 
-namespace Chips.Sitecore.ScheduledTasks
+namespace Chips.Sitecore.Commands
 {
-    public interface IScheduleTask
+    public interface ICommand
     {
         void Execute(Item[] items, CommandItem command, ScheduleItem schedule);
     }

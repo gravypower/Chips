@@ -7,8 +7,8 @@
     <ProjectGuid>{DAFB317E-889F-4AD4-9B3F-F26F07D48FE3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Chips.Sitecore.ScheduledTasks.DryIoc</RootNamespace>
-    <AssemblyName>Chips.Sitecore.ScheduledTasks.DryIoc</AssemblyName>
+    <RootNamespace>Chips.Sitecore.Commands.DryIoc</RootNamespace>
+    <AssemblyName>Chips.Sitecore.Commands.DryIoc</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScheduleTaskContainerAdapter.cs" />
+    <Compile Include="CommandContainerAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\DependencyInjection\Chips.DependencyInjection.DryIoc\Chips.DependencyInjection.DryIoc.csproj">
@@ -54,9 +54,9 @@
       <Project>{f0b2e57b-3f93-419f-9d66-b26a3751f8cc}</Project>
       <Name>Chips.DependencyInjection</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Chips.Sitecore.ScheduledTasks\Chips.Sitecore.ScheduledTasks.csproj">
+    <ProjectReference Include="..\Chips.Sitecore.Commands\Chips.Sitecore.Commands.csproj">
       <Project>{514c0311-8ef3-4128-8f10-ec927d12bee0}</Project>
-      <Name>Chips.Sitecore.ScheduledTasks</Name>
+      <Name>Chips.Sitecore.Commands</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

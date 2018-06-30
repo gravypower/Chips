@@ -1,10 +1,10 @@
 ﻿using Sitecore.Data.Items;
 using Sitecore.Tasks;
 
-namespace Chips.Sitecore.ScheduledTasks
+namespace Chips.Sitecore.Commands
 {
-    public abstract class AbstractScheduleTaskContainerAdapter<TScheduleTask>
-    where TScheduleTask : IScheduleTask
+    public abstract class AbstractCommandContainerAdapter<TCommand>
+    where TCommand : ICommand
     {
         public void Execute(Item[] items, CommandItem command, ScheduleItem schedule)
         {
@@ -12,6 +12,6 @@ namespace Chips.Sitecore.ScheduledTasks
             scheduleTask.Execute(items, command,schedule);
         }
 
-        protected abstract IScheduleTask ResolveScheduleTask();
+        protected abstract ICommand ResolveScheduleTask();
     }
 }

@@ -3,22 +3,22 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>2db06fb4-8a6e-4a89-b6e9-0c7ad5a4190b</ProjectGuid>
+    <ProjectGuid>5e23b9aa-ee4c-4bfb-bf57-e03b48e1af16</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup>
-    <PackageId>Chips.Sitecore.ScheduledTasks.DryIoc</PackageId>
+    <PackageId>Chips.Sitecore.Commands.SimpleInjector</PackageId>
     <PackageVersion Condition="'$(PackageVersion)' == ''">0.0.1-alpha</PackageVersion>
-    <Title>Chips.Sitecore.ScheduledTasks.DryIoc</Title>
+    <Title>Chips.Sitecore.Commands.SimpleInjector</Title>
     <Authors>Aaron Job</Authors>
     <Owners>Aaron Job</Owners>
-    <Summary>Chips.Sitecore.ScheduledTasks.DryIoc</Summary>
-    <Description>Chips.Sitecore.ScheduledTasks.DryIoc</Description>
+    <Summary>Chips.Sitecore.Commands.SimpleInjector</Summary>
+    <Description>Chips.Sitecore.Commands.SimpleInjector</Description>
     <PackageReleaseNotes>
     </PackageReleaseNotes>
-    <PackageProjectUrl>https://github.com/gravypower/Chips/tree/master/Chips.Sitecore.ScheduledTasks.DryIoc.NuGetPackage</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/gravypower/Chips/tree/master/Chips.Sitecore.Commands.SimpleInjector.NuGetPackage</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/gravypower/Chips/blob/master/LICENSE</PackageLicenseUrl>
     <Copyright>Copyright © Gravypowered</Copyright>
-    <PackageTags>Chips.Sitecore.ScheduledTasks.DryIoc</PackageTags>
+    <PackageTags>Chips.Sitecore.Commands.SimpleInjector</PackageTags>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <TargetFramework>netstandard1.0</TargetFramework>
     <PackageTargetFallback>net11;net20;net35;net40;net403;net45;net451;net452;net46;net461;net462;net47;net471;netcore;netcore45;netcore451;netcore50;win8;win81;win10;sl4;sl5;wp;wp7;wp75;wp8;wp81;wpa81;uap;uap10;netstandard1.0;netstandard1.1;netstandard1.2;netstandard1.3;netstandard1.4;netstandard1.5;netstandard1.6;netstandard2.0;netcoreapp1.0;netcoreapp2.0;monoandroid;monotouch;monomac;xamarinios;xamarinmac;xamarinpsthree;xamarinpsfour;xamarinpsvita;xamarinwatchos;xamarintvos;xamarinxboxthreesixty;xamarinxboxone</PackageTargetFallback>
@@ -28,21 +28,19 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'" />
   <ItemGroup>
-    <ProjectReference Include="..\..\Sitecore\ScheduledTasks\Chips.Sitecore.ScheduledTasks.Dryioc\Chips.Sitecore.ScheduledTasks.DryIoc.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="NuGet.Build.Packaging">
       <Version>0.2.5-pr160.1</Version>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="SimpleInjector">
+      <Version>4.3.0</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\" />
+    <PackageFile Include="Content\ExampleCommand.pp" />
   </ItemGroup>
   <ItemGroup>
-    <PackageFile Include="..\Chips.Sitecore.ScheduledTasks.SimpleInjector.NuGetPackage\Content\SampleScheduledTask.cs.pp">
-      <Link>Content\SampleScheduledTask.cs.pp</Link>
-    </PackageFile>
+    <ProjectReference Include="..\..\Sitecore\Commands\Chips.Sitecore.Commands.SimpleInjector\Chips.Sitecore.Commands.SimpleInjector.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />

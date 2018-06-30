@@ -7,19 +7,17 @@
   </PropertyGroup>
   <PropertyGroup>
     <PackageId>Chips.Sitecore.Factory.DryIoc</PackageId>
-    <PackageVersion Condition="'$(PackageVersion)' == ''">1.0.0</PackageVersion>
+    <PackageVersion Condition="'$(PackageVersion)' == ''">0.0.1-alpha</PackageVersion>
     <Title>Chips.Sitecore.Factory.DryIoc</Title>
-    <Authors>Administrator</Authors>
-    <Owners>Administrator</Owners>
+    <Authors>Aaron Job</Authors>
+    <Owners>Aaron Job</Owners>
     <Summary>Chips.Sitecore.Factory.DryIoc</Summary>
     <Description>Chips.Sitecore.Factory.DryIoc</Description>
     <PackageReleaseNotes>
     </PackageReleaseNotes>
-    <PackageProjectUrl>
-    </PackageProjectUrl>
-    <PackageLicenseUrl>
-    </PackageLicenseUrl>
-    <Copyright>Copyright © Administrator</Copyright>
+    <PackageProjectUrl>https://github.com/gravypower/Chips/tree/master/src/Sitecore/Factory/Chips.Sitecore.Factory.DryIoc</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/gravypower/Chips/blob/master/LICENSE</PackageLicenseUrl>
+    <Copyright>Copyright © Gravypowered</Copyright>
     <PackageTags>Chips.Sitecore.Factory.DryIoc</PackageTags>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <TargetFramework>netstandard1.0</TargetFramework>
