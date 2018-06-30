@@ -6,7 +6,7 @@
     <ProjectGuid>5966e1cf-4ad3-4c70-87ac-56890dac1dde</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup>
-    <PackageId>Chips.Sitecore.Factory.Simpleinjector</PackageId>
+    <PackageId>Chips.Sitecore.Factory.Simpleinjector.NuGetPackage</PackageId>
     <PackageVersion Condition="'$(PackageVersion)' == ''">0.0.1-alpha</PackageVersion>
     <Title>Chips.Sitecore.Factory.Simpleinjector</Title>
     <Authors>Aaron Job</Authors>

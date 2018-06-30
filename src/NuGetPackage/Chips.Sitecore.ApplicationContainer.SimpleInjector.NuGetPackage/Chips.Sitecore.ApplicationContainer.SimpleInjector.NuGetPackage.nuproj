@@ -6,7 +6,7 @@
     <ProjectGuid>37072013-d8eb-4bfa-a911-4fb156334955</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup>
-    <PackageId>Chips.Sitecore.ApplicationContainer.SimpleInjector</PackageId>
+    <PackageId>Chips.Sitecore.ApplicationContainer.SimpleInjector.NuGetPackage</PackageId>
     <PackageVersion Condition="'$(PackageVersion)' == ''">0.0.1-alpha</PackageVersion>
     <Title>Chips.Sitecore.ApplicationContainer.SimpleInjector</Title>
     <Authors>Aaron Job</Authors>

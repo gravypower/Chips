@@ -6,7 +6,7 @@
     <ProjectGuid>2db06fb4-8a6e-4a89-b6e9-0c7ad5a4190b</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup>
-    <PackageId>Chips.Sitecore.Commands.DryIoc</PackageId>
+    <PackageId>Chips.Sitecore.Commands.DryIoc.NuGetPackage</PackageId>
     <PackageVersion Condition="'$(PackageVersion)' == ''">0.0.1-alpha</PackageVersion>
     <Title>Chips.Sitecore.Commands.DryIoc</Title>
     <Authors>Aaron Job</Authors>
