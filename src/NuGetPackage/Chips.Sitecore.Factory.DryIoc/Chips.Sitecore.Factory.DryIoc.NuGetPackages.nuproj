@@ -34,6 +34,9 @@
     <PackageFile Include="Content\App_Config\Include\Z.Chips\Chips.Sitecore.Factory.DryIoc.config" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Chips.Sitecore.ApplicationContainer.DryIoc">
+      <Version>0.0.1-alpha</Version>
+    </PackageReference>
     <PackageReference Include="NuGet.Build.Packaging">
       <Version>0.2.5-pr160.1</Version>
       <PrivateAssets>all</PrivateAssets>
