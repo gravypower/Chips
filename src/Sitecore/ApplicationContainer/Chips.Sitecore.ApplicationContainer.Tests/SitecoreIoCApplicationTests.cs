@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
 using System.Reflection;
-using Chips.Reflection;
 using Chips.Sitecore.ApplicationContainer.Exceptions;
 using Chips.Tests.Common;
 using FluentAssertions;
@@ -56,8 +53,6 @@ namespace Chips.Sitecore.ApplicationContainer.Tests
 
             //Assert
             multipleApplications.Should().Throw<MultipleApplicationFound>();
-
-
         }
     }
 }
