@@ -49,28 +49,17 @@
     <Compile Include="CommandContainerAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\DependencyInjection\Chips.DependencyInjection.SimpleInjector\Chips.DependencyInjection.SimpleInjector.csproj">
-      <Project>{359db7da-e1a9-47ca-b41b-d5c152c205ad}</Project>
-      <Name>Chips.DependencyInjection.SimpleInjector</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\DependencyInjection\Chips.DependencyInjection\Chips.DependencyInjection.csproj">
-      <Project>{F0B2E57B-3F93-419F-9D66-B26A3751F8CC}</Project>
-      <Name>Chips.DependencyInjection</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Chips.Sitecore.Commands\Chips.Sitecore.Commands.csproj">
       <Project>{514c0311-8ef3-4128-8f10-ec927d12bee0}</Project>
       <Name>Chips.Sitecore.Commands</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Chips.Sitecore.ApplicationContainer.SimpleInjector.NuGetPackage">
+      <Version>0.0.1-alpha</Version>
+    </PackageReference>
     <PackageReference Include="NuGet.Build.Packaging">
       <Version>0.2.5-pr160.1</Version>
-    </PackageReference>
-    <PackageReference Include="SimpleInjector">
-      <Version>4.3.0</Version>
-    </PackageReference>
-    <PackageReference Include="Sitecore.Kernel.NoReferences">
-      <Version>9.0.171219</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

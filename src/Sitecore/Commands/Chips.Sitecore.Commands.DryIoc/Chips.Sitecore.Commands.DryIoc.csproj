@@ -45,24 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandContainerAdapter - Copy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CommandContainerAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\DependencyInjection\Chips.DependencyInjection.DryIoc\Chips.DependencyInjection.DryIoc.csproj">
-      <Project>{823592B1-F422-4974-A1DB-23F12A7C7288}</Project>
-      <Name>Chips.DependencyInjection.DryIoc</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\DependencyInjection\Chips.DependencyInjection\Chips.DependencyInjection.csproj">
-      <Project>{f0b2e57b-3f93-419f-9d66-b26a3751f8cc}</Project>
-      <Name>Chips.DependencyInjection</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Chips.Sitecore.Commands\Chips.Sitecore.Commands.csproj">
       <Project>{514c0311-8ef3-4128-8f10-ec927d12bee0}</Project>
       <Name>Chips.Sitecore.Commands</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Chips.Sitecore.ApplicationContainer.DryIoc.NuGetPackage">
+      <Version>0.0.1-alpha</Version>
+    </PackageReference>
     <PackageReference Include="NuGet.Build.Packaging">
       <Version>0.2.5-pr160.1</Version>
     </PackageReference>
