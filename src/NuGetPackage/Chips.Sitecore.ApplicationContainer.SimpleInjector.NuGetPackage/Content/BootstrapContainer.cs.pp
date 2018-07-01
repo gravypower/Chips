@@ -1,6 +1,7 @@
-﻿using System;
-using Chips.DependencyInjection;
+﻿using Chips.DependencyInjection;
 using SimpleInjector;
+using Sitecore.Abstractions;
+using Sitecore.DependencyInjection;
 
 namespace $rootnamespace$
 {
@@ -8,6 +9,7 @@ namespace $rootnamespace$
     {
         public void Bootstrap(Container container)
         {
+            container.Register(() => ServiceLocator.GetRequiredResetableService<BaseLog>().Value);
         }
     }
 }
