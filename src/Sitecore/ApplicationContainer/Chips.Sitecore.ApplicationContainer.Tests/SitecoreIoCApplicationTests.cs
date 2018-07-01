@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using Chips.Reflection;
@@ -43,7 +44,7 @@ namespace Chips.Sitecore.ApplicationContainer.Tests
         public void Isolated_WhenMoreThanOneApplicationExitsMultipleApplicationFoundThrown()
         {
             //Assign
-            var applicationName = MethodBase.GetCurrentMethod().Name;
+            var applicationName = nameof(Isolated_WhenMoreThanOneApplicationExitsMultipleApplicationFoundThrown);
             var typeBuilder = new FluentTypeBuilder(AppDomain.CurrentDomain)
                 .SetAssemblyName(applicationName)
                 .Implements<ISitecoreApplication>()
@@ -52,24 +53,21 @@ namespace Chips.Sitecore.ApplicationContainer.Tests
                 .CreateType()
                 .Save();
 
+            var dyamicAssembly = Assembly.LoadFile($"{Directory.GetCurrentDirectory()}\\{applicationName}.dll");
+
             var extraAssemblies = new List<Assembly>
             {
-                typeBuilder.ModuleBuilder.Assembly,
-                typeof(ISitecoreApplication).Assembly,
+                dyamicAssembly,
                 GetType().Assembly
             };
 
-
             //Act
-            Action multipleApplications = () =>
-            {
+            Action multipleApplications = () => 
                 Isolated.Execute(SitecoreApplication.PreApplicationStart, extraAssemblies);
-            };
 
             //Assert
             multipleApplications.Should().Throw<MultipleApplicationFound>();
 
-            //Annihilate
 #if !NCRUNCH
             File.Delete(applicationName + ".dll");
 #endif
