@@ -7,6 +7,7 @@ using Chips.Reflection;
 using Chips.Sitecore.ApplicationContainer.Exceptions;
 using Chips.Tests.Common;
 using FluentAssertions;
+using MultipleApplication;
 using NUnit.Framework;
 
 namespace Chips.Sitecore.ApplicationContainer.Tests
@@ -44,21 +45,9 @@ namespace Chips.Sitecore.ApplicationContainer.Tests
         public void Isolated_WhenMoreThanOneApplicationExitsMultipleApplicationFoundThrown()
         {
             //Assign
-            var applicationName = nameof(Isolated_WhenMoreThanOneApplicationExitsMultipleApplicationFoundThrown);
-            var typeBuilder = new FluentTypeBuilder(AppDomain.CurrentDomain)
-                .SetAssemblyName(applicationName)
-                .Implements<ISitecoreApplication>()
-                .ImplementInterface()
-                .SetTypeName(applicationName)
-                .CreateType()
-                .Save();
-
-            var dyamicAssembly = Assembly.LoadFile($"{Directory.GetCurrentDirectory()}\\{applicationName}.dll");
-
             var extraAssemblies = new List<Assembly>
             {
-                dyamicAssembly,
-                GetType().Assembly
+                typeof(Application1).Assembly
             };
 
             //Act
@@ -68,9 +57,7 @@ namespace Chips.Sitecore.ApplicationContainer.Tests
             //Assert
             multipleApplications.Should().Throw<MultipleApplicationFound>();
 
-#if !NCRUNCH
-            File.Delete(applicationName + ".dll");
-#endif
+
         }
     }
 }
