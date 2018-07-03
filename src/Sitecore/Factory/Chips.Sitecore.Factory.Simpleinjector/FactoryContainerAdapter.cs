@@ -1,7 +1,7 @@
 ﻿using System;
 using Chips.DependencyInjection.SimpleInjector;
 
-namespace Chips.Sitecore.Factory.Simpleinjector
+namespace Chips.Sitecore.Factory
 {
     public class FactoryContainerAdapter: AbstractFactoryContainerAdapter
     {

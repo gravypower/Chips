@@ -7,8 +7,8 @@
     <ProjectGuid>{DAFB317E-889F-4AD4-9B3F-F26F07D48FE3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Chips.Sitecore.Commands.DryIoc</RootNamespace>
-    <AssemblyName>Chips.Sitecore.Commands.DryIoc</AssemblyName>
+    <RootNamespace>Chips.Sitecore.Commands</RootNamespace>
+    <AssemblyName>Chips.Sitecore.Commands</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>

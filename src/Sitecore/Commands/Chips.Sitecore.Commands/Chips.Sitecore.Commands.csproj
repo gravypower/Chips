@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Chips.Sitecore.Commands</RootNamespace>
-    <AssemblyName>Chips.Sitecore.Commands</AssemblyName>
+    <AssemblyName>Chips.Sitecore.Commands.Base</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -56,6 +56,13 @@
     <PackageReference Include="Sitecore.Kernel.NoReferences">
       <Version>9.0.171219</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CommandContainerAdapter Items.xml" />
+    <Content Include="ExampleCommand.cs.pp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CommandContainerAdapter Items.zip" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

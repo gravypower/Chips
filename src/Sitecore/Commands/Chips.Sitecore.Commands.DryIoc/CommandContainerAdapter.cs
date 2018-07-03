@@ -1,14 +1,14 @@
-﻿using Chips.DependencyInjection.DryIoc;
+﻿using System;
+using Chips.DependencyInjection.DryIoc;
 using DryIoc;
 
-namespace Chips.Sitecore.Commands.DryIoc
+namespace Chips.Sitecore.Commands
 {
-    public class CommandContainerAdapter<TCommand> : AbstractCommandContainerAdapter<TCommand>
-    where TCommand : ICommand
+    public class CommandContainerAdapter : AbstractCommandContainerAdapter
     {
-        protected override ICommand ResolveScheduleTask()
+        protected override ICommand ResolveScheduleTask(Type commandType)
         {
-            return (ICommand)DryIocBootstrapper.Container.Resolve(typeof(TCommand));
+            return (ICommand)DryIocBootstrapper.Container.Resolve(commandType);
         }
     }
 }

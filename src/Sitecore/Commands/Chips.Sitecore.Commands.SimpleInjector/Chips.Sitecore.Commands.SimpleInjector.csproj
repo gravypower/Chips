@@ -7,8 +7,8 @@
     <ProjectGuid>{14F41784-5816-4C08-8D4E-FCA796FB1D8F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Chips.Sitecore.Commands.SimpleInjector</RootNamespace>
-    <AssemblyName>Chips.Sitecore.Commands.SimpleInjector</AssemblyName>
+    <RootNamespace>Chips.Sitecore.Commands</RootNamespace>
+    <AssemblyName>Chips.Sitecore.Commands</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>

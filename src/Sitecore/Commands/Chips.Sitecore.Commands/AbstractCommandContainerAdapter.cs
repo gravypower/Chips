@@ -1,17 +1,18 @@
-﻿using Sitecore.Data.Items;
+﻿using System;
+using Sitecore.Data.Items;
 using Sitecore.Tasks;
 
 namespace Chips.Sitecore.Commands
 {
-    public abstract class AbstractCommandContainerAdapter<TCommand>
-    where TCommand : ICommand
+    public abstract class AbstractCommandContainerAdapter
     {
-        public void Execute(Item[] items, CommandItem command, ScheduleItem schedule)
+        protected abstract ICommand ResolveScheduleTask(Type commandType);
+        public void Execute(Item[] items, CommandItem commandItem, ScheduleItem schedule)
         {
-            var scheduleTask = ResolveScheduleTask();
-            scheduleTask.Execute(items, command,schedule);
+            var commandTypecommand = commandItem["Command Type"];
+            var commandType = Type.GetType(commandTypecommand);
+            var command = (ICommand) ResolveScheduleTask(commandType);
+            command.Execute(items, commandItem, schedule);
         }
-
-        protected abstract ICommand ResolveScheduleTask();
     }
 }

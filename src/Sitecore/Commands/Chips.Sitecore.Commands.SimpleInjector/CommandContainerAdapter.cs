@@ -1,13 +1,13 @@
-﻿using Chips.DependencyInjection.SimpleInjector;
+﻿using System;
+using Chips.DependencyInjection.SimpleInjector;
 
-namespace Chips.Sitecore.Commands.SimpleInjector
+namespace Chips.Sitecore.Commands
 {
-    public class CommandContainerAdapter<TCommand> : AbstractCommandContainerAdapter<TCommand>
-    where TCommand : ICommand
+    public class CommandContainerAdapter : AbstractCommandContainerAdapter
     {
-        protected override ICommand ResolveScheduleTask()
+        protected override ICommand ResolveScheduleTask(Type commandType)
         {
-            return (ICommand)SimpleInjectorBootstrapper.Container.GetInstance(typeof(TCommand));
+            return (ICommand)SimpleInjectorBootstrapper.Container.GetInstance(commandType);
         }
     }
 }

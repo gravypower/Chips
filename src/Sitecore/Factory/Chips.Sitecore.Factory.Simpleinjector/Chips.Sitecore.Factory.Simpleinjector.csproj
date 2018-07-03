@@ -7,8 +7,8 @@
     <ProjectGuid>{542572AC-F809-41C9-9D44-7089F5F0E545}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Chips.Sitecore.Factory.Simpleinjector</RootNamespace>
-    <AssemblyName>Chips.Sitecore.Factory.Simpleinjector</AssemblyName>
+    <RootNamespace>Chips.Sitecore.Factory</RootNamespace>
+    <AssemblyName>Chips.Sitecore.Factory</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

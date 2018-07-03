@@ -37,7 +37,17 @@
     <ProjectReference Include="..\..\Sitecore\Commands\Chips.Sitecore.Commands.Dryioc\Chips.Sitecore.Commands.DryIoc.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageFile Include="Content\ExampleCommand.cs.pp" />
+    <Folder Include="Content\ItemPackage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageFile Include="..\..\Sitecore\Commands\Chips.Sitecore.Commands\CommandContainerAdapter Items.zip">
+      <Link>Content\ItemPackage\CommandContainerAdapter Items.zip</Link>
+    </PackageFile>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageFile Include="..\..\Sitecore\Commands\Chips.Sitecore.Commands\ExampleCommand.cs.pp">
+      <Link>Content\ExampleCommand.cs.pp</Link>
+    </PackageFile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />

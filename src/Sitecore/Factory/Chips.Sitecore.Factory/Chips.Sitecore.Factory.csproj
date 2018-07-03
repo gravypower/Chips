@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Chips.Sitecore.Factory</RootNamespace>
-    <AssemblyName>Chips.Sitecore.Factory</AssemblyName>
+    <AssemblyName>Chips.Sitecore.Factory.Base</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
