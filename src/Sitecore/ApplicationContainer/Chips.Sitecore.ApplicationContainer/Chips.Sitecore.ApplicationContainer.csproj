@@ -61,6 +61,10 @@
     <Compile Include="SitecoreApplication.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Chips.Common.Extensions\Chips.Common.Extensions.csproj">
+      <Project>{5aecad26-c1d7-4d28-ba8d-4e1fe36c8910}</Project>
+      <Name>Chips.Common.Extensions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\DependencyInjection\Chips.DependencyInjection\Chips.DependencyInjection.csproj">
       <Project>{f0b2e57b-3f93-419f-9d66-b26a3751f8cc}</Project>
       <Name>Chips.DependencyInjection</Name>

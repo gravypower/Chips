@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Chips.Common.Extensions;
 
 namespace Chips.DependencyInjection
 {
     public abstract class Bootstrapper<TContainer>
     {
-        private readonly IEnumerable<Assembly> _assembls;
+        private readonly IEnumerable<Assembly> _assemblies;
         protected abstract TContainer CreateContainer();
         protected abstract void VerifyContainer();
 
         public static TContainer Container { get; protected set; }
 
-        protected Bootstrapper(IEnumerable<Assembly> assembls)
+        protected Bootstrapper(IEnumerable<Assembly> assemblies)
         {
-            _assembls = assembls;
+            _assemblies = assemblies;
         }
 
         public void Bootstrap()
@@ -32,8 +33,7 @@ namespace Chips.DependencyInjection
         }
 
         private IEnumerable<Type> GetBootstrapTypes() =>
-            from assembly in _assembls
-            from type in assembly.GetExportedTypes()
+            from type in _assemblies.GetLoadableTypes()
             where typeof(IBootstrap<TContainer>).IsAssignableFrom(type) && !type.IsAbstract
             select type;
     }

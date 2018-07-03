@@ -102,7 +102,7 @@ namespace Chips.Reflection
         /// </value>
         public AssemblyBuilder AssemblyBuilder { get; private set; }
 
-        private bool implementInterface { get; set; }
+        private bool _implementInterface { get; set; }
 
         private _AppDomain AppDomain { get; set; }
 
@@ -120,7 +120,7 @@ namespace Chips.Reflection
                 BaseType,
                 Interfaces.ToArray());
 
-            if (implementInterface)
+            if (_implementInterface)
                 ImplementInterfaceHelper();
 
             TypeBuilder.CreatePassThroughConstructors(BaseType);
@@ -273,7 +273,7 @@ namespace Chips.Reflection
 
         public FluentTypeBuilder ImplementInterface()
         {
-            implementInterface = true;
+            _implementInterface = true;
             return this;
         }
 

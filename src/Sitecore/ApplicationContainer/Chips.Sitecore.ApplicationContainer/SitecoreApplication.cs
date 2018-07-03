@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using Chips.Common.Extensions;
 using Chips.Sitecore.ApplicationContainer;
 using Chips.Sitecore.ApplicationContainer.Exceptions;
-using Chips.Sitecore.ApplicationContainer.Properties;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(SitecoreApplication), "PreApplicationStart")]
 [assembly: WebActivatorEx.ApplicationShutdownMethod(typeof(SitecoreApplication), "ApplicationShutdown")]
@@ -17,19 +17,18 @@ namespace Chips.Sitecore.ApplicationContainer
 
         static SitecoreApplication()
         {
-            ApplicationAssemblies = AppDomain.CurrentDomain.GetAssemblies()
-                .Where(a => !a.IsDynamic)
-                .Where(a => !Settings.Default.IgnoreProductList.Contains(a.GetAssemblyAttribute<AssemblyProductAttribute>(ass => ass.Product)))
-                .Where(a => !Settings.Default.IgnoreCompaniesList.Contains(a.GetAssemblyAttribute<AssemblyCompanyAttribute>(ass => ass.Company)));
-
-            var applications = ApplicationAssemblies.SelectMany(a => a.GetTypes())
-                .Where(t => !t.IsInterface)
-                .Where(t => typeof(ISitecoreApplication).IsAssignableFrom(t)).ToList();
+            var applications = default(List<Type>);
 
             try
             {
+                ApplicationAssemblies = AppDomain.CurrentDomain.GetAssemblies();
+                
+                applications = ApplicationAssemblies.GetLoadableTypes()
+                    .Where(t => !t.IsInterface)
+                    .Where(t => typeof(ISitecoreApplication).IsAssignableFrom(t)).ToList();
+
                 var applicationType = applications.Single();
-                Application = (ISitecoreApplication)Activator.CreateInstance(applicationType);
+                Application = (ISitecoreApplication) Activator.CreateInstance(applicationType);
             }
             catch (InvalidOperationException e)
             {
@@ -51,7 +50,7 @@ namespace Chips.Sitecore.ApplicationContainer
                     message += loaderException.Message + "\n";
                 }
 
-                throw new Exception(message);
+                throw new Exception(message, re);
             }
         }
 

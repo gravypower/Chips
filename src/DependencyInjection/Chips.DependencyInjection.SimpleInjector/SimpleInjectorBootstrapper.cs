@@ -7,7 +7,7 @@ namespace Chips.DependencyInjection.SimpleInjector
     public class SimpleInjectorBootstrapper : Bootstrapper<Container>
     {
 
-        public SimpleInjectorBootstrapper(IEnumerable<Assembly> assembls) : base(assembls)
+        public SimpleInjectorBootstrapper(IEnumerable<Assembly> assemblies) : base(assemblies)
         {
         }
 

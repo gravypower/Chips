@@ -22,36 +22,5 @@ namespace Chips.Sitecore.ApplicationContainer.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
-<ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
-  <string>YUI Compressor</string>
-  <string>Microsoft.AspNet.Identity.Owin</string>
-</ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection IgnoreProductList {
-            get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["IgnoreProductList"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
-<ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
-  <string>Sitecore Corporation A/S.</string>
-  <string>Microsoft</string>
-  <string>Microsoft Corporation</string>
-  <string>Microsoft Corporation.</string>
-  <string>MongoDB Inc.</string>
-  <string>.NET Foundation and Contributors.</string>
-  <string>Newtonsoft</string>
-</ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection IgnoreCompaniesList {
-            get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["IgnoreCompaniesList"]));
-            }
-        }
     }
 }

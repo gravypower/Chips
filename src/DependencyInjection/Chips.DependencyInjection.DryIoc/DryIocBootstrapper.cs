@@ -7,7 +7,7 @@ namespace Chips.DependencyInjection.DryIoc
     public class DryIocBootstrapper : Bootstrapper<Container>
     {
 
-        public DryIocBootstrapper(IEnumerable<Assembly> assembls) : base(assembls)
+        public DryIocBootstrapper(IEnumerable<Assembly> assemblies) : base(assemblies)
         {
         }
 
