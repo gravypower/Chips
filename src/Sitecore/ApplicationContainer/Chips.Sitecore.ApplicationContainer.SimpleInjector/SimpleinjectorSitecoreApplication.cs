@@ -1,6 +1,6 @@
 ﻿using Chips.DependencyInjection.SimpleInjector;
 
-namespace Chips.Sitecore.ApplicationContainer.SimpleInjector
+namespace Chips.Sitecore.ApplicationContainer
 {
     public class SimpleinjectorSitecoreApplication : ISitecoreApplication
     {

@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Chips.Sitecore.ApplicationContainer\Chips.Sitecore.ApplicationContainer.csproj">
-      <Project>{aea94422-eb92-4400-b551-fad39b743c9b}</Project>
+      <Project>{93DE594B-EA19-40A8-B0C1-2E349ABE740A}</Project>
       <Name>Chips.Sitecore.ApplicationContainer</Name>
     </ProjectReference>
   </ItemGroup>

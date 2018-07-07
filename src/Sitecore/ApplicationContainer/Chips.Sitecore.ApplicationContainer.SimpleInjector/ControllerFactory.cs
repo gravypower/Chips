@@ -3,9 +3,9 @@ using System.Web.Mvc;
 using Chips.DependencyInjection.SimpleInjector;
 using SimpleInjector;
 
-namespace Chips.Sitecore.ApplicationContainer.SimpleInjector
+namespace Chips.Sitecore.ApplicationContainer
 {
-    public class ControllerFactory: ControllerFactory<Container>
+    public class ControllerFactory : ControllerFactory<Container>
     {
         public ControllerFactory(IControllerFactory innerFactory) : base(innerFactory)
         {

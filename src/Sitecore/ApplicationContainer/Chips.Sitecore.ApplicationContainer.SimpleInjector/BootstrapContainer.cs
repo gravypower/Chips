@@ -1,7 +1,7 @@
 ﻿using Chips.DependencyInjection;
 using SimpleInjector;
 
-namespace Chips.Sitecore.ApplicationContainer.SimpleInjector
+namespace Chips.Sitecore.ApplicationContainer
 {
     public class BootstrapContainer : IBootstrap<Container>
     {

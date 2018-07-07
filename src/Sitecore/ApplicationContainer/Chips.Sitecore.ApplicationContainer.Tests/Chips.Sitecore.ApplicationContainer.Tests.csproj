@@ -60,7 +60,7 @@
       <Name>Chips.Tests.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Chips.Sitecore.ApplicationContainer\Chips.Sitecore.ApplicationContainer.csproj">
-      <Project>{aea94422-eb92-4400-b551-fad39b743c9b}</Project>
+      <Project>{93de594b-ea19-40a8-b0c1-2e349abe740a}</Project>
       <Name>Chips.Sitecore.ApplicationContainer</Name>
     </ProjectReference>
     <ProjectReference Include="..\MultipleApplication\MultipleApplication.csproj">
