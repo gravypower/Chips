@@ -111,6 +111,7 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Z.Chips\Chips.Sitecore.ApplicationContainer.config" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Chips.Common.Extensions\Chips.Common.Extensions.csproj">

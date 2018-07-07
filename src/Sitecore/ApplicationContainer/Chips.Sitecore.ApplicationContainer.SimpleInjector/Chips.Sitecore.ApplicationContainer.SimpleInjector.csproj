@@ -104,6 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\DependencyInjection\Chips.DependencyInjection.SimpleInjector\Chips.DependencyInjection.SimpleInjector.csproj">
