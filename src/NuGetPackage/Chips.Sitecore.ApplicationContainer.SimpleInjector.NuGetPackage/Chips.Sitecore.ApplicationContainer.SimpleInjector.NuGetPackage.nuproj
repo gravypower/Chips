@@ -7,7 +7,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <PackageId>Chips.Sitecore.ApplicationContainer.SimpleInjector.NuGetPackage</PackageId>
-    <PackageVersion Condition="'$(PackageVersion)' == ''">0.0.1-alpha</PackageVersion>
+    <PackageVersion Condition="'$(PackageVersion)' == ''">0.0.2-alpha</PackageVersion>
     <Title>Chips.Sitecore.ApplicationContainer.SimpleInjector</Title>
     <Authors>Aaron Job</Authors>
     <Owners>Aaron Job</Owners>
@@ -32,15 +32,20 @@
       <Version>0.2.5-pr160.1</Version>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="SimpleInjector">
-      <Version>4.3.0</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageFile Include="Content\App_Config\Include\Z.Chips\Chips.Sitecore.ApplicationContainer.Simpleinjector.config" />
   </ItemGroup>
   <ItemGroup>
     <PackageFile Include="Content\BootstrapContainer.cs.pp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Sitecore\ApplicationContainer\Chips.Sitecore.ApplicationContainer.SimpleInjector\Chips.Sitecore.ApplicationContainer.SimpleInjector.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\App_Config\Include\Z.Chips\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageFile Include="..\..\Sitecore\ApplicationContainer\Chips.Sitecore.ApplicationContainer\App_Config\Include\Z.Chips\Chips.Sitecore.ApplicationContainer.config">
+      <Link>Content\App_Config\Include\Z.Chips\Chips.Sitecore.ApplicationContainer.config</Link>
+    </PackageFile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />

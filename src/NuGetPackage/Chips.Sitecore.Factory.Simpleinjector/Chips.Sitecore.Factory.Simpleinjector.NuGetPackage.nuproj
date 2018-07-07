@@ -7,7 +7,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <PackageId>Chips.Sitecore.Factory.Simpleinjector.NuGetPackage</PackageId>
-    <PackageVersion Condition="'$(PackageVersion)' == ''">0.0.1-alpha</PackageVersion>
+    <PackageVersion Condition="'$(PackageVersion)' == ''">0.0.2-alpha</PackageVersion>
     <Title>Chips.Sitecore.Factory.Simpleinjector</Title>
     <Authors>Aaron Job</Authors>
     <Owners>Aaron Job</Owners>
@@ -35,6 +35,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\App_Config\Include\Z.Chips\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageFile Include="..\..\Sitecore\Factory\Chips.Sitecore.Factory\App_Config\Include\Z.Chips\Chips.Sitecore.Factory.config">
+      <Link>Content\App_Config\Include\Z.Chips\Chips.Sitecore.Factory.config</Link>
+    </PackageFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Sitecore\Factory\Chips.Sitecore.Factory.Simpleinjector\Chips.Sitecore.Factory.Simpleinjector.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />

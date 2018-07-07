@@ -7,7 +7,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <PackageId>Chips.Sitecore.Commands.SimpleInjector.NuGetPackage</PackageId>
-    <PackageVersion Condition="'$(PackageVersion)' == ''">0.0.1-alpha</PackageVersion>
+    <PackageVersion Condition="'$(PackageVersion)' == ''">0.0.2-alpha</PackageVersion>
     <Title>Chips.Sitecore.Commands.SimpleInjector</Title>
     <Authors>Aaron Job</Authors>
     <Owners>Aaron Job</Owners>
@@ -35,14 +35,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Sitecore\Commands\Chips.Sitecore.Commands.SimpleInjector\Chips.Sitecore.Commands.SimpleInjector.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\ItemPackage\" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageFile Include="..\..\Sitecore\Commands\Chips.Sitecore.Commands\CommandContainerAdapter Items.zip">
-      <Link>Content\ItemPackage\CommandContainerAdapter Items.zip</Link>
-    </PackageFile>
   </ItemGroup>
   <ItemGroup>
     <PackageFile Include="..\..\Sitecore\Commands\Chips.Sitecore.Commands\ExampleCommand.cs.pp">
