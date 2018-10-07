@@ -112,8 +112,19 @@
     <Content Include="App_Config\Include\Z.Chips\Chips.Sitecore.ApplicationContainer.config" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Chips.Common.Extensions\Chips.Common.Extensions.csproj">
+      <Project>{5aecad26-c1d7-4d28-ba8d-4e1fe36c8910}</Project>
+      <Name>Chips.Common.Extensions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\DependencyInjection\Chips.DependencyInjection\Chips.DependencyInjection.csproj">
       <Project>{f0b2e57b-3f93-419f-9d66-b26a3751f8cc}</Project>
       <Name>Chips.DependencyInjection</Name>
