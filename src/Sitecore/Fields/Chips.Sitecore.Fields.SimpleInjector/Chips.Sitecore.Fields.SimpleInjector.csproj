@@ -30,8 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SimpleInjector, Version=4.3.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\SimpleInjector.4.3.0\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\Sitecore.Kernel.NoReferences.9.0.171219\lib\NET462\Sitecore.Kernel.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,10 +52,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\DependencyInjection\Chips.DependencyInjection.SimpleInjector\Chips.DependencyInjection.SimpleInjector.csproj">
+      <Project>{359DB7DA-E1A9-47CA-B41B-D5C152C205AD}</Project>
+      <Name>Chips.DependencyInjection.SimpleInjector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\DependencyInjection\Chips.DependencyInjection\Chips.DependencyInjection.csproj">
+      <Project>{F0B2E57B-3F93-419F-9D66-B26A3751F8CC}</Project>
+      <Name>Chips.DependencyInjection</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Chips.Sitecore.Fields\Chips.Sitecore.Fields.csproj">
       <Project>{a8f9d5ec-faeb-4ca5-bfce-2411ebe2f9c1}</Project>
       <Name>Chips.Sitecore.Fields</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

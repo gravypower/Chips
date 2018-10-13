@@ -1,12 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Chips.DependencyInjection.SimpleInjector;
+using Sitecore.Web.UI.HtmlControls;
 
 namespace Chips.Sitecore.Fields
 {
-    public class FieldContainerAdapter:AbstractFieldContainerAdapter
+    public class FieldContainerAdapter : AbstractFieldContainerAdapter
     {
+        protected override Control ResolveScheduleTask(Type controlType)
+        {
+            return (Control)SimpleInjectorBootstrapper.Container.GetInstance(controlType);
+        }
     }
 }
