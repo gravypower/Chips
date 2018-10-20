@@ -78,16 +78,6 @@
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Chips.Sitecore.Fields.SimpleInjector\Chips.Sitecore.Fields.SimpleInjector.csproj">
-      <Project>{100cb147-9e1b-4548-b5b5-a09dab22601a}</Project>
-      <Name>Chips.Sitecore.Fields.SimpleInjector</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Chips.Sitecore.Fields\Chips.Sitecore.Fields.csproj">
-      <Project>{a8f9d5ec-faeb-4ca5-bfce-2411ebe2f9c1}</Project>
-      <Name>Chips.Sitecore.Fields</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

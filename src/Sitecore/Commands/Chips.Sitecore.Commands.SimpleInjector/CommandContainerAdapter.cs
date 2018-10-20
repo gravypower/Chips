@@ -5,7 +5,7 @@ namespace Chips.Sitecore.Commands
 {
     public class CommandContainerAdapter : AbstractCommandContainerAdapter
     {
-        protected override ICommand ResolveScheduleTask(Type commandType)
+        protected override ICommand ResolveCommand(Type commandType)
         {
             return (ICommand)SimpleInjectorBootstrapper.Container.GetInstance(commandType);
         }

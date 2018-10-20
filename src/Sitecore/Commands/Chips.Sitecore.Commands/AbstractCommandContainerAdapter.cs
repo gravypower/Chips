@@ -6,12 +6,12 @@ namespace Chips.Sitecore.Commands
 {
     public abstract class AbstractCommandContainerAdapter
     {
-        protected abstract ICommand ResolveScheduleTask(Type commandType);
+        protected abstract ICommand ResolveCommand(Type commandType);
         public void Execute(Item[] items, CommandItem commandItem, ScheduleItem schedule)
         {
             var commandTypecommand = commandItem["Command Type"];
             var commandType = Type.GetType(commandTypecommand);
-            var command = (ICommand) ResolveScheduleTask(commandType);
+            var command = (ICommand) ResolveCommand(commandType);
             command.Execute(items, commandItem, schedule);
         }
     }

@@ -112,13 +112,6 @@
     <Content Include="App_Config\Include\Z.Chips\Chips.Sitecore.ApplicationContainer.config" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
-    <Content Include="web.config" />
-    <None Include="web.Debug.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
-    <None Include="web.Release.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Chips.Common.Extensions\Chips.Common.Extensions.csproj">

@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// General Information about an assembly is controlled through the following
+// General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Chips.Sitecore.Fields")]
@@ -14,23 +14,22 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-// Setting ComVisible to false makes the types in this assembly not visible
-// to COM components.  If you need to access a type in this assembly from
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
 // COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a8f9d5ec-faeb-4ca5-bfce-2411ebe2f9c1")]
+[assembly: Guid("6c3319a9-14a2-47a5-b954-a0bbbf20a983")]
 
 // Version information for an assembly consists of the following four values:
 //
 //      Major Version
-//      Minor Version
+//      Minor Version 
 //      Build Number
 //      Revision
 //
-// You can specify all the values or you can default the Build and Revision Numbers
+// You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]

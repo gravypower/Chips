@@ -83,13 +83,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.Commands", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.Commands.SimpleInjector", "Sitecore\Commands\Chips.Sitecore.Commands.SimpleInjector\Chips.Sitecore.Commands.SimpleInjector.csproj", "{03714C54-DA0C-4FCD-B466-E2890A8F6E67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.Fields", "Sitecore\Fields\Chips.Sitecore.Fields\Chips.Sitecore.Fields.csproj", "{A8F9D5EC-FAEB-4CA5-BFCE-2411EBE2F9C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.Fields", "Sitecore\Fields\Chips.Sitecore.Fields\Chips.Sitecore.Fields.csproj", "{6C3319A9-14A2-47A5-B954-A0BBBF20A983}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleInjector", "SimpleInjector", "{252B636F-97DB-4089-A507-E7F6600831DB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.Fields.SimpleInjector", "Sitecore\Fields\Chips.Sitecore.Fields.SimpleInjector\Chips.Sitecore.Fields.SimpleInjector.csproj", "{100CB147-9E1B-4548-B5B5-A09DAB22601A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.Fields.Tests", "Sitecore\Fields\Chips.Sitecore.Fields.Tests\Chips.Sitecore.Fields.Tests\Chips.Sitecore.Fields.Tests.csproj", "{B87DEA22-52A1-43C5-8FE1-518E4CF7D3F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chips.Sitecore.Fields.SimpleInjector", "Sitecore\Fields\Chips.Sitecore.Fields.SimpleInjector\Chips.Sitecore.Fields.SimpleInjector.csproj", "{8597A7EB-E19E-4834-AF7F-2AC38BB3B049}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -198,18 +194,14 @@ Global
 		{03714C54-DA0C-4FCD-B466-E2890A8F6E67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03714C54-DA0C-4FCD-B466-E2890A8F6E67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03714C54-DA0C-4FCD-B466-E2890A8F6E67}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A8F9D5EC-FAEB-4CA5-BFCE-2411EBE2F9C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A8F9D5EC-FAEB-4CA5-BFCE-2411EBE2F9C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A8F9D5EC-FAEB-4CA5-BFCE-2411EBE2F9C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A8F9D5EC-FAEB-4CA5-BFCE-2411EBE2F9C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{100CB147-9E1B-4548-B5B5-A09DAB22601A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{100CB147-9E1B-4548-B5B5-A09DAB22601A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{100CB147-9E1B-4548-B5B5-A09DAB22601A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{100CB147-9E1B-4548-B5B5-A09DAB22601A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B87DEA22-52A1-43C5-8FE1-518E4CF7D3F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B87DEA22-52A1-43C5-8FE1-518E4CF7D3F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B87DEA22-52A1-43C5-8FE1-518E4CF7D3F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B87DEA22-52A1-43C5-8FE1-518E4CF7D3F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C3319A9-14A2-47A5-B954-A0BBBF20A983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C3319A9-14A2-47A5-B954-A0BBBF20A983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C3319A9-14A2-47A5-B954-A0BBBF20A983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C3319A9-14A2-47A5-B954-A0BBBF20A983}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8597A7EB-E19E-4834-AF7F-2AC38BB3B049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8597A7EB-E19E-4834-AF7F-2AC38BB3B049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8597A7EB-E19E-4834-AF7F-2AC38BB3B049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8597A7EB-E19E-4834-AF7F-2AC38BB3B049}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -250,13 +242,11 @@ Global
 		{0F2AD254-A75F-4230-AF3C-10136192C913} = {D425C194-7CFA-4B13-AD8D-E2EFCCB4FD2B}
 		{1A61CE76-6EF7-41CB-984E-6EEBC4ECBBA3} = {97989B02-4A6D-43AF-9545-F21628190B52}
 		{03714C54-DA0C-4FCD-B466-E2890A8F6E67} = {97989B02-4A6D-43AF-9545-F21628190B52}
-		{A8F9D5EC-FAEB-4CA5-BFCE-2411EBE2F9C1} = {087FB25B-D0E9-4A54-AFA9-31149A23C7F4}
-		{252B636F-97DB-4089-A507-E7F6600831DB} = {087FB25B-D0E9-4A54-AFA9-31149A23C7F4}
-		{100CB147-9E1B-4548-B5B5-A09DAB22601A} = {252B636F-97DB-4089-A507-E7F6600831DB}
-		{B87DEA22-52A1-43C5-8FE1-518E4CF7D3F0} = {087FB25B-D0E9-4A54-AFA9-31149A23C7F4}
+		{6C3319A9-14A2-47A5-B954-A0BBBF20A983} = {087FB25B-D0E9-4A54-AFA9-31149A23C7F4}
+		{8597A7EB-E19E-4834-AF7F-2AC38BB3B049} = {087FB25B-D0E9-4A54-AFA9-31149A23C7F4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {76917B93-1E72-407C-98A2-E8C45E4EF39C}
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
+		SolutionGuid = {76917B93-1E72-407C-98A2-E8C45E4EF39C}
 	EndGlobalSection
 EndGlobal

@@ -6,11 +6,6 @@ namespace Chips.Sitecore.Fields.UnboundDroplist
 {
     public class UnboundDroplist : ValueLookupEx
     {
-        public UnboundDroplist()
-        {
-
-        }
-
         protected override void OnLoad(EventArgs e)
         {
             if(Controls.Count == 0)
@@ -41,7 +36,6 @@ namespace Chips.Sitecore.Fields.UnboundDroplist
                 }
             }
 
-            base.OnLoad(e);
             base.OnLoad(e);
         }
     }
